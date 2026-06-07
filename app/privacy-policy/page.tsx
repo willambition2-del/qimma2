@@ -1,3 +1,4 @@
+import PageHeader from "@/components/ui/PageHeader";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -20,21 +21,10 @@ export default function PrivacyPolicyPage() {
       <Header />
       <main className="flex-grow">
         {/* Header */}
-        <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-          <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-          <div className="relative container-custom text-center">
-            <Badge variant="gold" className="mb-6">
-              الأمان والسرية
-            </Badge>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              سياسة الخصوصية
-            </h1>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              نهتم بخصوصية بياناتك وسريتها. يوضح هذا المستند كيفية جمع معلوماتك واستخدامها وحمايتها.
-            </p>
-          </div>
-          <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-        </section>
+        <PageHeader badge="الأمان والسرية"
+        title="سياسة الخصوصية"
+        description="نهتم بخصوصية بياناتك وسريتها. يوضح هذا المستند كيفية جمع معلوماتك واستخدامها وحمايتها."
+        imageSrc="/images/hero/slide-1.png" />
 
         {/* Content */}
         <section className="section-padding">

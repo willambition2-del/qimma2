@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { systemExamples } from "@/data/services";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
@@ -32,6 +32,31 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function SystemsSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0.45); // Default scale factor
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleResize = () => {
+      const width = container.offsetWidth;
+      if (width > 0) {
+        setScale(width / 1280);
+      }
+    };
+
+    handleResize();
+    const timer = setTimeout(handleResize, 150);
+
+    const observer = new ResizeObserver(handleResize);
+    observer.observe(container);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -122,15 +147,15 @@ export default function SystemsSection() {
                 return (
                   <div
                     key={idx}
-                    className="systems-example opacity-0 flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/8 hover:bg-white/10 transition-colors duration-300"
+                    className="systems-example flex items-center gap-3 px-4.5 py-3.5 rounded-xl bg-primary-light/10 border border-gold/30 hover:border-gold/60 hover:bg-primary-light/15 transition-all duration-300 shadow-sm"
                   >
                     {Icon && (
                       <Icon
-                        className="w-4.5 h-4.5 text-gold shrink-0"
+                        className="w-5 h-5 text-gold shrink-0"
                         strokeWidth={1.8}
                       />
                     )}
-                    <span className="text-xs md:text-sm text-white/80 leading-snug">
+                    <span className="text-sm md:text-base font-semibold text-white leading-snug">
                       {example.title}
                     </span>
                   </div>
@@ -158,76 +183,51 @@ export default function SystemsSection() {
             </div>
           </div>
 
-          {/* Dashboard Mockup Placeholder */}
-          <div className="systems-mockup opacity-0">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              {/* Dark gradient background simulating a dashboard */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0D1B3E] via-[#142B5A] to-[#0D1B3E] rounded-2xl border border-white/10" />
-
-              {/* Grid pattern */}
-              <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-
-              {/* Simulated dashboard UI elements */}
-              <div className="absolute inset-5 flex flex-col gap-4">
-                {/* Top bar */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-gold/60" />
-                    <div className="w-20 h-2.5 rounded-full bg-white/15" />
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-2.5 rounded-full bg-white/10" />
-                    <div className="w-8 h-2.5 rounded-full bg-white/10" />
-                    <div className="w-8 h-2.5 rounded-full bg-white/10" />
-                  </div>
+          {/* Laptop Mockup containing live Pharmacy System iframe */}
+          <div className="systems-mockup opacity-0 w-full max-w-[580px] mx-auto">
+            {/* Laptop Screen Lid */}
+            <div className="relative bg-neutral-900 rounded-t-[20px] p-[8px] md:p-[10px] border border-neutral-700/60 shadow-elevated">
+              {/* Screen Bezel Interior */}
+              <div className="relative bg-neutral-950 rounded-lg overflow-hidden border border-neutral-800 shadow-inner">
+                {/* Camera Notch */}
+                <div className="absolute top-1.5 inset-x-0 flex justify-center z-20">
+                  <div className="w-1.5 h-1.5 bg-neutral-900 rounded-full border border-neutral-800/40" />
                 </div>
 
-                {/* Content area */}
-                <div className="flex-1 grid grid-cols-3 gap-3">
-                  {/* Sidebar */}
-                  <div className="col-span-1 space-y-2">
-                    {[...Array(6)].map((_, i) => (
-                      <div
-                        key={i}
-                        className={`h-3 rounded-full ${
-                          i === 1 ? "bg-gold/30 w-full" : "bg-white/8 w-4/5"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  {/* Main content */}
-                  <div className="col-span-2 space-y-3">
-                    {/* Stats row */}
-                    <div className="grid grid-cols-3 gap-2">
-                      {[1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className="p-3 rounded-lg bg-white/5 border border-white/5"
-                        >
-                          <div className="w-8 h-2 rounded-full bg-gold/25 mb-2" />
-                          <div className="w-12 h-3 rounded-full bg-white/15" />
-                        </div>
-                      ))}
-                    </div>
-                    {/* Chart placeholder */}
-                    <div className="flex-1 rounded-lg bg-white/5 border border-white/5 p-3 min-h-[80px]">
-                      <div className="flex items-end justify-around h-full gap-1.5 pt-4">
-                        {[40, 65, 45, 80, 55, 70, 60].map((h, i) => (
-                          <div
-                            key={i}
-                            className="w-full rounded-t bg-gradient-to-t from-gold/40 to-gold/10"
-                            style={{ height: `${h}%` }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                {/* Screen frame and Iframe wrapper */}
+                <div 
+                  ref={containerRef} 
+                  className="relative w-full aspect-[16/10] bg-neutral-900 overflow-hidden select-none"
+                  style={{ direction: "ltr" }}
+                >
+                  <iframe
+                    src="https://sale-savvy-pharmacy.vercel.app/"
+                    title="Sale Savvy Pharmacy Preview"
+                    className="absolute left-0 top-0 border-0 pointer-events-auto origin-top-left"
+                    style={{
+                      width: "1280px",
+                      height: "800px",
+                      transform: `scale(${scale})`,
+                      transformOrigin: "top left",
+                      backgroundColor: "#0f172a"
+                    }}
+                    sandbox="allow-scripts allow-same-origin allow-popups"
+                    loading="lazy"
+                  />
                 </div>
               </div>
-
-              {/* Glow effect */}
-              <div className="absolute -top-10 -end-10 w-40 h-40 bg-gold/10 rounded-full blur-3xl" />
             </div>
+
+            {/* Laptop Base keyboard deck */}
+            <div className="relative h-[12px] bg-gradient-to-b from-neutral-300 via-neutral-400 to-neutral-500 rounded-b-[8px] shadow-md z-10">
+              {/* Open notch */}
+              <div className="absolute top-0 inset-x-0 flex justify-center">
+                <div className="w-16 h-[4px] bg-neutral-600 rounded-b-[4px]" />
+              </div>
+            </div>
+
+            {/* Laptop shadow */}
+            <div className="w-[94%] mx-auto h-[8px] bg-black/40 rounded-full blur-[3px] mt-1" />
           </div>
         </div>
       </div>

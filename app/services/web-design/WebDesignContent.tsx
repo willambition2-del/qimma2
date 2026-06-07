@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import Image from "next/image";
 import { CheckCircle2, Globe, ShoppingBag, Layout, Zap, Search, ShieldCheck } from "lucide-react";
 import Badge from "@/components/ui/Badge";
@@ -50,21 +52,10 @@ export default function WebDesignContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            تصميم وبرمجة
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            تصميم المواقع والمتاجر الإلكترونية
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            نبني واجهتك الرقمية الأولى. مواقع سريعة، جذابة، وآمنة تزيد من مبيعاتك وتعكس حجم وقيمة عملك واحترافيته.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="تصميم وبرمجة"
+        title="تصميم المواقع والمتاجر الإلكترونية"
+        description="نبني واجهتك الرقمية الأولى. مواقع سريعة، جذابة، وآمنة تزيد من مبيعاتك وتعكس حجم وقيمة عملك واحترافيته."
+        imageSrc="/images/hero/slide-2.png" />
 
       {/* Main Details Section */}
       <section className="section-padding">

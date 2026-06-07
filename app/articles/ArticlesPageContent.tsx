@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import { useState } from "react";
 import { Calendar, Search, ArrowLeft } from "lucide-react";
 import Badge from "@/components/ui/Badge";
@@ -83,21 +85,10 @@ export default function ArticlesPageContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            مقالات وأفكار
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            المدونة المعرفية
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            نشاركك خبراتنا في البرمجة والتسويق لمساعدتك على أخذ قرارات أفضل وتنمية تجارتك بذكاء.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="مقالات وأفكار"
+        title="المدونة المعرفية"
+        description="نشاركك خبراتنا في البرمجة والتسويق لمساعدتك على أخذ قرارات أفضل وتنمية تجارتك بذكاء."
+        imageSrc="/images/hero/slide-3.png" />
 
       {/* Filters & Search controls */}
       <section className="pt-16 pb-8">

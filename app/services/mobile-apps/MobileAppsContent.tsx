@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import Image from "next/image";
 import { CheckCircle2, Truck, ShoppingBag, Calendar, BookOpen, Heart, Briefcase, MessageCircle, Home, Smartphone, Apple, Play } from "lucide-react";
 import Badge from "@/components/ui/Badge";
@@ -44,21 +46,10 @@ export default function MobileAppsContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            تطبيقات ذكية
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            تطوير تطبيقات الموبايل
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            اجعل فكرتك في جيب عملائك دائمًا. نطور تطبيقات موبايل لنظامي iOS و Android بأعلى معايير السرعة، الأمان، والجمال البصري.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="تطبيقات ذكية"
+        title="تطوير تطبيقات الموبايل"
+        description="اجعل فكرتك في جيب عملائك دائمًا. نطور تطبيقات موبايل لنظامي iOS و Android بأعلى معايير السرعة، الأمان، والجمال البصري."
+        imageSrc="/images/hero/slide-3.png" />
 
       {/* Main Details Section */}
       <section className="section-padding">

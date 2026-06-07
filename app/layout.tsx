@@ -75,6 +75,17 @@ export default function RootLayout({
       dir="rtl"
       className={`${ibmPlexArabic.variable} ${inter.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && window.self !== window.top) {
+                document.documentElement.classList.add('is-embedded');
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col antialiased">
         {children}
       </body>

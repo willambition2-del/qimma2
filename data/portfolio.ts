@@ -12,6 +12,33 @@ export const portfolioCategories: PortfolioCategory[] = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    id: 'makzanelc',
+    title: 'متجر مخزن الإلكتروني',
+    description:
+      'تصميم وتطوير متجر إلكتروني متكامل لبيع وتوزيع الأجهزة الإلكترونية ومستلزمات الجوال الذكية على منصة سلة مع تجربة مستخدم مميزة وسلسة.',
+    category: 'stores',
+    image: '/portfolio/placeholder-1.jpg',
+    tags: ['متجر إلكتروني', 'أجهزة إلكترونية', 'منصة سلة'],
+  },
+  {
+    id: 'mgxsa',
+    title: 'مجموعة إم جي إكس (MGX)',
+    description:
+      'تصميم وتطوير موقع تعريفي متكامل يعرض خدمات وحلول المجموعة الإعلانية والتسويقية بهوية بصرية مميزة وتصميم متجاوب.',
+    category: 'websites',
+    image: '/portfolio/placeholder-3.jpg',
+    tags: ['موقع تعريفي', 'تصميم متجاوب', 'برمجة وتطوير'],
+  },
+  {
+    id: 'roshnreit',
+    title: 'صندوق روشن ريت العقاري',
+    description:
+      'تصميم وتطوير منصة مالية عقارية تفاعلية مخصصة للمستثمرين تعرض بيانات الصندوق والأصول العقارية والتقارير المالية بدقة.',
+    category: 'websites',
+    image: '/portfolio/placeholder-3.jpg',
+    tags: ['منصة عقارية', 'بيانات مالية', 'تطوير ويب'],
+  },
+  {
     id: 'project-1',
     title: 'متجر أزياء إلكتروني',
     description:
@@ -30,22 +57,13 @@ export const portfolioItems: PortfolioItem[] = [
     tags: ['تسويق رقمي', 'سوشال ميديا', 'حملات إعلانية'],
   },
   {
-    id: 'project-3',
-    title: 'موقع شركة عقارية',
+    id: 'pharmacy-system',
+    title: 'نظام إدارة الصيدليات (Sale Savvy)',
     description:
-      'تصميم وتطوير موقع احترافي لشركة عقارية مع نظام عرض العقارات والبحث المتقدم وصفحات تفصيلية لكل عقار.',
-    category: 'websites',
-    image: '/portfolio/placeholder-3.jpg',
-    tags: ['موقع إلكتروني', 'عقارات', 'تصميم متجاوب'],
-  },
-  {
-    id: 'project-4',
-    title: 'نظام إدارة عيادات طبية',
-    description:
-      'تطوير نظام متكامل لإدارة العيادات والمراكز الطبية يشمل الحجوزات والسجلات الطبية والتقارير.',
+      'نظام سحابي متكامل لإدارة الصيدليات ونقاط البيع والمخازن والمشتريات مصمم خصيصاً لتحسين الكفاءة التشغيلية.',
     category: 'systems',
     image: '/portfolio/placeholder-4.jpg',
-    tags: ['نظام إدارة', 'قطاع طبي', 'لوحة تحكم'],
+    tags: ['نظام سحابي', 'إدارة الصيدليات', 'نقاط بيع'],
   },
   {
     id: 'project-5',
@@ -64,24 +82,6 @@ export const portfolioItems: PortfolioItem[] = [
     category: 'branding',
     image: '/portfolio/placeholder-6.jpg',
     tags: ['هوية بصرية', 'شعار', 'دليل الهوية'],
-  },
-  {
-    id: 'project-7',
-    title: 'متجر إلكتروني للعطور',
-    description:
-      'تصميم متجر إلكتروني فاخر لبيع العطور مع تجربة مستخدم مميزة ونظام توصيات ذكي وربط مع شركات الشحن.',
-    category: 'stores',
-    image: '/portfolio/placeholder-7.jpg',
-    tags: ['متجر إلكتروني', 'عطور', 'تجربة مستخدم'],
-  },
-  {
-    id: 'project-8',
-    title: 'تطبيق حجز مواعيد صالون',
-    description:
-      'تطوير تطبيق موبايل لحجز مواعيد صالون تجميل مع نظام إشعارات وتذكير وإدارة الحجوزات والموظفين.',
-    category: 'apps',
-    image: '/portfolio/placeholder-8.jpg',
-    tags: ['تطبيق موبايل', 'حجز مواعيد', 'صالون'],
   },
 ];
 

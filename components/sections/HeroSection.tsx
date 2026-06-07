@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, MessageCircle, Sparkles } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
@@ -11,6 +11,20 @@ export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const orbsRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    "/images/hero/slide-1.png",
+    "/images/hero/slide-2.png",
+    "/images/hero/slide-3.png"
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -105,27 +119,36 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-primary-dark"
+      className="relative min-h-screen flex items-center overflow-hidden bg-white"
       id="hero"
     >
-      {/* Background */}
-      <div className="absolute inset-0">
-        {/* Gradient Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-dark" />
-
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-
-        {/* Decorative Orbs */}
-        <div ref={orbsRef} className="absolute inset-0 transition-transform duration-300 ease-out">
-          <div className="hero-orb-1 absolute top-[15%] end-[10%] w-72 h-72 bg-gold/8 rounded-full blur-3xl" />
-          <div className="hero-orb-2 absolute bottom-[20%] start-[5%] w-96 h-96 bg-primary-light/10 rounded-full blur-3xl" />
-          <div className="hero-orb-3 absolute top-[50%] end-[40%] w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
+      {/* Background Slideshow */}
+      <div className="absolute inset-0 bg-white overflow-hidden">
+        {/* Slides */}
+        <div className="absolute inset-0 z-0">
+          {slides.map((slide, idx) => (
+            <div
+              key={idx}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${slide})`,
+                opacity: currentSlide === idx ? 1 : 0,
+                zIndex: currentSlide === idx ? 1 : 0,
+                transition: "opacity 1.5s ease-in-out",
+              }}
+            />
+          ))}
         </div>
 
-        {/* Decorative Lines */}
-        <div className="absolute top-0 start-[20%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-        <div className="absolute top-0 end-[30%] w-px h-full bg-gradient-to-b from-transparent via-gold/5 to-transparent" />
+        {/* Grid & Lines Parallax Container */}
+        <div ref={orbsRef} className="absolute inset-0 z-10 transition-transform duration-300 ease-out">
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-15" />
+
+          {/* Decorative Lines */}
+          <div className="absolute top-0 start-[20%] w-px h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+          <div className="absolute top-0 end-[30%] w-px h-full bg-gradient-to-b from-transparent via-gold/15 to-transparent" />
+        </div>
       </div>
 
       {/* Content */}
@@ -133,21 +156,21 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="hero-badge opacity-0 mb-6">
-            <Badge variant="light">
+            <Badge variant="blue">
               <Sparkles className="w-3.5 h-3.5" />
               حلول رقمية متكاملة
             </Badge>
           </div>
 
           {/* Title */}
-          <h1 className="hero-title opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white leading-tight mb-6">
+          <h1 className="hero-title opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-foreground leading-tight mb-6">
             نصنع حضورك الرقمي
             <br />
             <span className="text-gold">ونحوّل أفكارك</span> إلى نتائج حقيقية
           </h1>
 
           {/* Description */}
-          <p className="hero-description opacity-0 text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mb-10">
+          <p className="hero-description opacity-0 text-base md:text-lg text-muted leading-relaxed max-w-2xl mb-10">
             حلول متكاملة في التسويق الرقمي، تصميم المواقع، تطوير الأنظمة،
             وتطبيقات الموبايل لمساعدتك على النمو والوصول إلى عملائك باحترافية.
           </p>
@@ -167,7 +190,6 @@ export default function HeroSection() {
               variant="secondary"
               size="lg"
               href="/services"
-              className="border-white/20 text-white hover:bg-white/10"
             >
               استكشف خدماتنا
             </Button>
@@ -189,7 +211,7 @@ export default function HeroSection() {
                 <div className="font-inter text-2xl md:text-3xl font-bold text-gold">
                   {stat.value > 10 && "+"}{stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-white/50 mt-1">
+                <div className="text-xs md:text-sm text-muted mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -199,7 +221,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white to-transparent z-10" />
     </section>
   );
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import { useState } from "react";
 import { Check, ChevronDown, Sparkles, MessageCircle } from "lucide-react";
 import Badge from "@/components/ui/Badge";
@@ -19,21 +21,10 @@ export default function PackagesPageContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            عروض وباقات قمة
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            باقات مرنة تناسب <span className="text-gold">حجم نموك</span>
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            اختر الباقة الأنسب لاحتياجاتك التسويقية أو البرمجية. نقدم لك خدمات متكاملة تضمن أعلى جودة وتكامل رقمي.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="عروض وباقات قمة"
+        title={<>باقات مرنة تناسب <span className="text-gold">حجم نموك</span></>}
+        description="اختر الباقة الأنسب لاحتياجاتك التسويقية أو البرمجية. نقدم لك خدمات متكاملة تضمن أعلى جودة وتكامل رقمي."
+        imageSrc="/images/hero/slide-2.png" />
 
       {/* Packages Section */}
       <section className="section-padding">

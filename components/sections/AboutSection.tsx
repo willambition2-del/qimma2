@@ -100,7 +100,7 @@ export default function AboutSection() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1">
             <div className="about-badge opacity-0 mb-5">
               <Badge variant="gold">5 سنوات من الخبرة</Badge>
             </div>
@@ -150,7 +150,7 @@ export default function AboutSection() {
           </div>
 
           {/* Visual Placeholder */}
-          <div className="order-1 lg:order-2 about-visual opacity-0">
+          <div className="order-2 about-visual opacity-0">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               {/* Gradient placeholder simulating an image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-primary rounded-2xl" />

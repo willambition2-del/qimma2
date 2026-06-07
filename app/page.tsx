@@ -5,7 +5,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import SystemsSection from "@/components/sections/SystemsSection";
-import MobileAppsSection from "@/components/sections/MobileAppsSection";
+import WebsitesShowcaseSection from "@/components/sections/WebsitesShowcaseSection";
 import WhyQimmaSection from "@/components/sections/WhyQimmaSection";
 import PackagesSection from "@/components/sections/PackagesSection";
 import StatsSection from "@/components/sections/StatsSection";
@@ -26,7 +26,7 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <SystemsSection />
-        <MobileAppsSection />
+        <WebsitesShowcaseSection />
         <WhyQimmaSection />
         <PackagesSection />
         <StatsSection />

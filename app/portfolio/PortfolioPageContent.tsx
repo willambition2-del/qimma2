@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import { useState } from "react";
 import Image from "next/image";
 import { FileDown, ArrowLeft, ExternalLink } from "lucide-react";
@@ -19,21 +21,10 @@ export default function PortfolioPageContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            معرض أعمال قمة
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            مشاريع نفتخر <span className="text-gold">بإنجازها</span>
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            استعرض نماذج من أعمالنا السابقة في مجالات البرمجة، تطوير الأنظمة، تطبيقات الهواتف الذكية والتسويق الرقمي.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="معرض أعمال قمة"
+        title={<>مشاريع نفتخر <span className="text-gold">بإنجازها</span></>}
+        description="استعرض نماذج من أعمالنا السابقة في مجالات البرمجة، تطوير الأنظمة، تطبيقات الهواتف الذكية والتسويق الرقمي."
+        imageSrc="/images/hero/slide-2.png" />
 
       {/* Filter Tabs */}
       <section className="pt-16 pb-8">

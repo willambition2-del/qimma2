@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import Image from "next/image";
 import { CheckCircle2, Stethoscope, GraduationCap, Users, Warehouse, CalendarCheck, Building, CreditCard, FolderKanban, Handshake, Code2, ShieldAlert } from "lucide-react";
 import Badge from "@/components/ui/Badge";
@@ -45,21 +47,10 @@ export default function CustomSystemsContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            أنظمة مخصصة
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            برمجة وتطوير الأنظمة المخصصة
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            أنظمة برمجية مصممة خصيصًا لإدارة وتسهيل أعمالك، من أنظمة ERP و CRM إلى لوحات التحكم وإدارة الموارد والمخازن.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="أنظمة مخصصة"
+        title="برمجة وتطوير الأنظمة المخصصة"
+        description="أنظمة برمجية مصممة خصيصًا لإدارة وتسهيل أعمالك، من أنظمة ERP و CRM إلى لوحات التحكم وإدارة الموارد والمخازن."
+        imageSrc="/images/hero/slide-2.png" />
 
       {/* Main Details Section */}
       <section className="section-padding">

@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import { Phone, Mail, MessageSquare, MapPin } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -31,21 +33,10 @@ export default function ContactPageContent() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="gold" className="mb-6">
-            ابقى على اتصال
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            تواصل معنا <span className="text-gold">اليوم</span>
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            فريقنا جاهز دائمًا لمناقشة فكرتك وتقديم أفضل الحلول الرقمية لمشروعك. راسلنا أو اتصل بنا وسنسعد بخدمتك.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="ابقى على اتصال"
+        title={<>تواصل معنا <span className="text-gold">اليوم</span></>}
+        description="فريقنا جاهز دائمًا لمناقشة فكرتك وتقديم أفضل الحلول الرقمية لمشروعك. راسلنا أو اتصل بنا وسنسعد بخدمتك."
+        imageSrc="/images/hero/slide-1.png" />
 
       {/* Contact Cards & Form split */}
       <section className="section-padding">

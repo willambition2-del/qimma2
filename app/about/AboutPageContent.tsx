@@ -1,5 +1,7 @@
 "use client";
 
+import PageHeader from "@/components/ui/PageHeader";
+
 import Image from "next/image";
 import { CheckCircle, Users, Target, Award, Lightbulb } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -44,22 +46,10 @@ export default function AboutPageContent() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative bg-primary-dark pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="relative container-custom text-center">
-          <Badge variant="light" className="mb-6">
-            تعرّف علينا
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            شريكك نحو <span className="text-gold">النجاح الرقمي</span>
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            فريق احترافي يساعدك على تحقيق المبيعات عبر الأونلاين. نضع بين
-            يديك خبرات تسويقية وبرمجية متكاملة لمساعدتك على تطوير أعمالك.
-          </p>
-        </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <PageHeader badge="تعرّف علينا"
+        title={<>شريكك نحو <span className="text-gold">النجاح الرقمي</span></>}
+        description="فريق احترافي يساعدك على تحقيق المبيعات عبر الأونلاين. نضع بين يديك خبرات تسويقية وبرمجية متكاملة لمساعدتك على تطوير أعمالك."
+        imageSrc="/images/hero/slide-1.png" />
 
       {/* Story Section */}
       <section className="section-padding">

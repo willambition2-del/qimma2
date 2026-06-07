@@ -9,8 +9,11 @@ import { mainNavItems } from "@/data/navigation";
 import { siteConfig } from "@/data/site-config";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import Button from "@/components/ui/Button";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -60,7 +63,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="relative flex items-center shrink-0">
               <Image
-                src={isScrolled ? "/brand/qimma-logo.svg" : "/brand/qimma-logo-white.svg"}
+                src={(isScrolled || isHomePage) ? "/brand/qimma-logo.svg" : "/brand/qimma-logo-white.svg"}
                 alt={siteConfig.name}
                 width={100}
                 height={40}
@@ -82,7 +85,7 @@ export default function Header() {
                           )
                         }
                         className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                          isScrolled
+                          (isScrolled || isHomePage)
                             ? "text-foreground hover:text-primary hover:bg-primary-light"
                             : "text-white/90 hover:text-white hover:bg-white/10"
                         }`}
@@ -121,7 +124,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                        isScrolled
+                        (isScrolled || isHomePage)
                           ? "text-foreground hover:text-primary hover:bg-primary-light"
                           : "text-white/90 hover:text-white hover:bg-white/10"
                       }`}
@@ -138,7 +141,7 @@ export default function Header() {
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className={`p-2 rounded-lg transition-colors ${
-                  isScrolled
+                  (isScrolled || isHomePage)
                     ? "text-muted hover:text-primary hover:bg-primary-light"
                     : "text-white/80 hover:text-white hover:bg-white/10"
                 }`}
@@ -147,7 +150,7 @@ export default function Header() {
                 <Phone className="w-5 h-5" />
               </a>
               <Button
-                variant={isScrolled ? "primary" : "white"}
+                variant={(isScrolled || isHomePage) ? "primary" : "white"}
                 size="sm"
                 href={whatsappUrl}
                 target="_blank"
@@ -160,7 +163,7 @@ export default function Header() {
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className={`lg:hidden p-2 rounded-lg transition-colors ${
-                isScrolled
+                (isScrolled || isHomePage)
                   ? "text-foreground hover:bg-primary-light"
                   : "text-white hover:bg-white/10"
               }`}
