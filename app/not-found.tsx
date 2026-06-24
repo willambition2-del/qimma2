@@ -7,7 +7,7 @@ export default function NotFound() {
     <div className="min-h-screen flex items-center justify-center bg-surface">
       <div className="container-custom text-center py-20">
         <Image
-          src="/brand/qimma-logo.svg"
+          src="/brand/qimma-logo.png"
           alt="قمة"
           width={120}
           height={48}

@@ -14,12 +14,12 @@ export const mainNavItems: NavItem[] = [
     href: '/services',
     children: [
       {
-        label: 'التسويق الرقمي',
-        href: '/services/digital-marketing',
+        label: 'المواقع التعريفية',
+        href: '/services/info-websites',
       },
       {
-        label: 'تصميم المواقع والمتاجر',
-        href: '/services/web-design',
+        label: 'المتاجر الإلكترونية',
+        href: '/services/e-commerce',
       },
       {
         label: 'تطوير الأنظمة المخصصة',
@@ -29,19 +29,7 @@ export const mainNavItems: NavItem[] = [
         label: 'تطوير تطبيقات الموبايل',
         href: '/services/mobile-apps',
       },
-      {
-        label: 'الهوية والمحتوى الإعلاني',
-        href: '/services/branding',
-      },
-      {
-        label: 'الاستشارات الرقمية',
-        href: '/services/consulting',
-      },
     ],
-  },
-  {
-    label: 'الباقات',
-    href: '/packages',
   },
   {
     label: 'أعمالنا',

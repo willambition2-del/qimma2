@@ -11,6 +11,7 @@ import {
   Palette,
   Lightbulb,
   ArrowLeft,
+  ShoppingBag,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,6 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
   Smartphone,
   Palette,
   Lightbulb,
+  ShoppingBag,
 };
 
 export default function ServicesSection() {

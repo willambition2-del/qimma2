@@ -10,14 +10,10 @@ export interface CountryCode {
 }
 
 export const contactServices: ContactService[] = [
-  { id: 'digital-marketing', label: 'التسويق الرقمي' },
-  { id: 'web-design', label: 'تصميم المواقع الإلكترونية' },
-  { id: 'ecommerce', label: 'تصميم المتاجر الإلكترونية' },
+  { id: 'info-websites', label: 'موقع تعريفي' },
+  { id: 'e-commerce', label: 'متجر إلكتروني' },
   { id: 'custom-systems', label: 'تطوير الأنظمة المخصصة' },
   { id: 'mobile-apps', label: 'تطوير تطبيقات الموبايل' },
-  { id: 'branding', label: 'تصميم الهوية البصرية' },
-  { id: 'content', label: 'المحتوى الإعلاني' },
-  { id: 'consulting', label: 'الاستشارات الرقمية' },
 ];
 
 export const countryCodes: CountryCode[] = [

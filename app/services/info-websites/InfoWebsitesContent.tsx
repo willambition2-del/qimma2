@@ -1,9 +1,8 @@
 "use client";
 
 import PageHeader from "@/components/ui/PageHeader";
-
 import Image from "next/image";
-import { CheckCircle2, Globe, ShoppingBag, Layout, Zap, Search, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Globe, Layout, Zap, Search, ShieldCheck } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -12,11 +11,7 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 const features = [
   {
     title: "مواقع تعريفية للشركات والمؤسسات",
-    description: "تصميم موقع تعريفي يعكس قيمة وأهداف مؤسستك، بتصميم فريد يجذب العملاء ويرسخ الثقة.",
-  },
-  {
-    title: "متاجر إلكترونية متكاملة للبيع",
-    description: "تأسيس وبرمجة متاجر إلكترونية تدعم سلات الشراء، طرق دفع متعددة (مدى، فيزا، أبل باي)، وربط الشحن والتخزين.",
+    description: "تصميم موقع تعريفي يعكس قيمة وأهداف مؤسستك، بتصميم فريد يجذب العملاء ويرسخ الثقة والمهنية في قطاع أعمالك.",
   },
   {
     title: "صفحات هبوط تسويقية (Landing Pages)",
@@ -24,7 +19,11 @@ const features = [
   },
   {
     title: "تصميم متجاوب ومتوافق بالكامل",
-    description: "تظهر مواقعنا بشكل مثالي وسلس على كافة أحجام الشاشات، من الهواتف الذكية إلى أجهزة الكمبيوتر المكتبية.",
+    description: "تظهر مواقعنا بشكل مثالي وسلس على كافة أحجام الشاشات، من الهواتف الذكية والأجهزة اللوحية إلى أجهزة الكمبيوتر المكتبية.",
+  },
+  {
+    title: "لوحات تحكم عربية مرنة وسهلة",
+    description: "لوحة تحكم تمكنك من تعديل المحتوى والصور وإضافة خدمات جديدة بسهولة بالغة ودون الحاجة لأي خبرة برمجية سابقة.",
   },
 ];
 
@@ -32,29 +31,29 @@ const technicalStrengths = [
   {
     icon: Zap,
     title: "سرعة وأداء فائق",
-    desc: "نستخدم أحدث تقنيات الويب النظيفة والخفيفة لضمان تحميل موقعك في أجزاء من الثانية.",
+    desc: "نستخدم أحدث تقنيات الويب النظيفة والخفيفة لضمان تحميل موقعك في أجزاء من الثانية مما يقلل من معدلات الارتداد.",
   },
   {
     icon: Search,
     title: "صديق لمحركات البحث SEO",
-    desc: "تتم كتابة الكود البرمجي وبناء الهيكل بالشكل الذي يسهل على عناكب جوجل أرشفة موقعك وتصدره.",
+    desc: "تتم كتابة الكود البرمجي وبناء الهيكل بالشكل الذي يسهل على عناكب جوجل أرشفة موقعك وتصدره في محركات البحث.",
   },
   {
     icon: ShieldCheck,
     title: "أمان وحماية قصوى",
-    desc: "نطبق أعلى معايير الحماية لشهادات SSL وتأمين البيانات ضد الاختراقات والهجمات السيبرانية.",
+    desc: "نطبق أعلى معايير الحماية لشهادات SSL وتأمين البيانات لضمان سلامة موقعك وزوارك ضد أي ثغرات أو اختراقات.",
   },
 ];
 
-export default function WebDesignContent() {
-  const whatsappUrl = buildWhatsAppUrl("مرحبًا، أريد الاستفسار عن تفاصيل تصميم موقع/متجر إلكتروني");
+export default function InfoWebsitesContent() {
+  const whatsappUrl = buildWhatsAppUrl("مرحبًا، أريد الاستفسار عن تفاصيل تطوير موقع تعريفي للشركة");
 
   return (
     <>
       {/* Hero Header */}
-      <PageHeader badge="تصميم وبرمجة"
-        title="تصميم المواقع والمتاجر الإلكترونية"
-        description="نبني واجهتك الرقمية الأولى. مواقع سريعة، جذابة، وآمنة تزيد من مبيعاتك وتعكس حجم وقيمة عملك واحترافيته."
+      <PageHeader badge="حلول ويب"
+        title="برمجة مواقع الويب التعريفية"
+        description="نبني واجهتك الرقمية الأولى عبر خدمات برمجة مواقع وتطوير مواقع سريعة وجذابة تزيد من مصداقيتك وتعكس حجم وقيمة عملك واحترافيته."
         imageSrc="/images/hero/slide-2.png" />
 
       {/* Main Details Section */}
@@ -63,19 +62,19 @@ export default function WebDesignContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal>
               <div>
-                <span className="text-gold font-bold text-sm block mb-2">منصات رقمية متكاملة لنمو تجارتك</span>
+                <span className="text-gold font-bold text-sm block mb-2">حضور رقمي يعكس هويتك الحقيقية</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  موقعك الإلكتروني هو موظف المبيعات الذي لا ينام
+                  موقعك الإلكتروني هو عنوانك الدائم على شبكة الإنترنت
                 </h2>
                 <p className="text-muted leading-relaxed mb-6">
-                  تصميم المواقع في قمة لا يقتصر على الشكل الجمالي فقط؛ نحن نهتم برحلة المستخدم وتجربة التصفح (UI/UX) لضمان سهولة الوصول للمعلومات أو إتمام الشراء بأقل عدد من الخطوات.
+                  برمجة مواقع الويب وتطويرها في قمة لا يقتصر على المظهر الخارجي فقط؛ نحن نهتم برحلة المستخدم وتجربة التصفح (UI/UX) لضمان سهولة الوصول للمعلومات أو إرسال استفسار عبر موقع برمجيات متكامل بأقل عدد من الخطوات.
                 </p>
                 <p className="text-muted leading-relaxed mb-8">
-                  ندمج موقعك مع أنظمة التحليلات (Google Analytics, Pixel) لتتبع سلوك الزوار وفهم مصادر الترافيك بدقة، مما يساعدك على اتخاذ القرارات التسويقية المبنية على بيانات حقيقية.
+                  سواء كنت تريد برمجة موقع الكتروني تعريفي أو صفحة هبوط تسويقية، يوفر لك مبرمج مواقع متخصص لدينا الأداء الأسرع والأمثل، وندمج موقعك مع أنظمة التحليلات وتتبع سلوك الزوار لخدمتك.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button href={whatsappUrl} variant="gold" size="lg" target="_blank">
-                    اطلب تصميم موقعك الآن
+                    اطلب موقعك التعريفي الآن
                   </Button>
                 </div>
               </div>
@@ -84,7 +83,7 @@ export default function WebDesignContent() {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-primary-light to-primary/10">
                 <Image
                   src="/images/systems-dashboard.png"
-                  alt="تصميم وبرمجة المواقع والمتاجر"
+                  alt="تطوير المواقع التعريفية"
                   fill
                   className="object-cover"
                 />
@@ -99,10 +98,10 @@ export default function WebDesignContent() {
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              ماذا تشمل خدمات الويب لدينا؟
+              ماذا تشمل خدمات المواقع التعريفية؟
             </h2>
             <p className="text-muted">
-              نصمم ونطور المواقع والمتاجر لتكون مرنة وقابلة للتطوير المستقبلي بما يتماشى مع توسع أعمالك.
+              نصمم ونطور المواقع لتكون مرنة وقابلة للتطوير المستقبلي بما يتماشى مع توسع أعمالك.
             </p>
           </div>
 
@@ -160,14 +159,14 @@ export default function WebDesignContent() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
         <div className="relative container-custom text-center max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            هل أنت جاهز لنقل تجارتك للأونلاين؟
+            هل أنت جاهز لبناء موقعك التعريفي؟
           </h2>
           <p className="text-white/70 mb-8 max-w-xl mx-auto leading-relaxed">
-            سواء كنت ترغب في متجر إلكتروني متكامل أو موقع تعريفي للشركة، فريقنا قادر على بناء ذلك بدقة متناهية. تواصل معنا للحصول على مقترح فني ومالي لموقعك.
+            فريقنا جاهز لدراسة متطلبات مشروعك وتقديم موقع احترافي مخصص بالكامل ليناسب هوية وأهداف عملك وميزانيتك.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href={whatsappUrl} variant="gold" size="lg" target="_blank">
-              اطلب عرض سعر لمشروعك
+              اطلب موقعك التعريفي الآن
             </Button>
             <Button href="/portfolio" variant="secondary" size="lg" className="border-white/20 text-white hover:bg-white/10">
               مشاهدة أعمالنا السابقة

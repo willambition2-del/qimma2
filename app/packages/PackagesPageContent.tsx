@@ -23,7 +23,7 @@ export default function PackagesPageContent() {
       {/* Hero Header */}
       <PageHeader badge="عروض وباقات قمة"
         title={<>باقات مرنة تناسب <span className="text-gold">حجم نموك</span></>}
-        description="اختر الباقة الأنسب لاحتياجاتك التسويقية أو البرمجية. نقدم لك خدمات متكاملة تضمن أعلى جودة وتكامل رقمي."
+        description="اختر الباقة الأنسب لاحتياجاتك سواء خدمات تسويق الكتروني أو خدمات برمجية. نقدم حلولاً تضمن لك أفضل أداء وتصدر لمحركات البحث."
         imageSrc="/images/hero/slide-2.png" />
 
       {/* Packages Section */}

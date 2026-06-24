@@ -6,9 +6,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ClientsSection() {
-  // Duplicate for seamless loop
-  const row1 = [...clients, ...clients];
-  const row2 = [...clients, ...clients];
+  // Split clients into two groups to avoid duplicates in the same view
+  const half = Math.ceil(clients.length / 2);
+  const group1 = clients.slice(0, half);
+  const group2 = clients.slice(half);
+
+  // Duplicate each group for a seamless loop
+  const row1 = [...group1, ...group1];
+  const row2 = [...group2, ...group2];
 
   return (
     <section id="clients" className="section-padding bg-surface overflow-hidden">
@@ -30,7 +35,7 @@ export default function ClientsSection() {
               key={`row1-${client.id}-${idx}`}
               className="shrink-0 mx-4 md:mx-6 flex items-center justify-center"
             >
-              <div className="w-28 h-20 md:w-36 md:h-24 relative rounded-xl border border-border bg-white p-4 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+              <div className="w-28 h-20 md:w-36 md:h-24 relative p-2 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                 <Image
                   src={client.logo}
                   alt={client.name}
@@ -52,7 +57,7 @@ export default function ClientsSection() {
               key={`row2-${client.id}-${idx}`}
               className="shrink-0 mx-4 md:mx-6 flex items-center justify-center"
             >
-              <div className="w-28 h-20 md:w-36 md:h-24 relative rounded-xl border border-border bg-white p-4 flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+              <div className="w-28 h-20 md:w-36 md:h-24 relative p-2 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                 <Image
                   src={client.logo}
                   alt={client.name}

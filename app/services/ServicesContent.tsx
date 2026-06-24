@@ -3,7 +3,7 @@
 import PageHeader from "@/components/ui/PageHeader";
 
 import Link from "next/link";
-import { Megaphone, Globe, Settings, Smartphone, Palette, Lightbulb, ArrowLeft } from "lucide-react";
+import { Megaphone, Globe, Settings, Smartphone, Palette, Lightbulb, ArrowLeft, ShoppingBag } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -17,6 +17,7 @@ const iconMap: { [key: string]: any } = {
   Smartphone,
   Palette,
   Lightbulb,
+  ShoppingBag,
 };
 
 export default function ServicesContent() {
@@ -25,7 +26,7 @@ export default function ServicesContent() {
       {/* Hero Header */}
       <PageHeader badge="خدماتنا الرقمية"
         title={<>حلول متكاملة تغطي <span className="text-gold">جميع احتياجاتك</span></>}
-        description="نجمع بين التفكير الاستراتيجي والتقنيات الحديثة لمساعدتك على التفوق الرقمي. اكتشف مجموعة خدماتنا الشاملة."
+        description="نقدم خدمات تسويق الكتروني احترافية، برمجة مواقع الويب، تطوير تطبيقات الجوال، وتطوير البرمجيات المخصصة لمساعدتك على التفوق الرقمي."
         imageSrc="/images/hero/slide-2.png" />
 
       {/* Services Grid */}

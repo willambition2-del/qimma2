@@ -63,11 +63,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="relative flex items-center shrink-0">
               <Image
-                src={(isScrolled || isHomePage) ? "/brand/qimma-logo.svg" : "/brand/qimma-logo-white.svg"}
+                src="/brand/qimma-logo.png"
                 alt={siteConfig.name}
                 width={100}
                 height={40}
-                className="h-10 w-auto transition-opacity duration-300"
+                className={`h-10 w-auto transition-all duration-300 ${(isScrolled || isHomePage) ? "" : "brightness-0 invert"}`}
                 priority
               />
             </Link>
@@ -204,7 +204,7 @@ export default function Header() {
               {/* Mobile Header */}
               <div className="flex items-center justify-between p-5 border-b border-border">
                 <Image
-                  src="/brand/qimma-logo.svg"
+                  src="/brand/qimma-logo.png"
                   alt={siteConfig.name}
                   width={80}
                   height={32}

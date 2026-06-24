@@ -14,12 +14,11 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    "/images/hero/slide-1.png",
-    "/images/hero/slide-2.png",
-    "/images/hero/slide-3.png"
+    "/images/hero/slide-2.png"
   ];
 
   useEffect(() => {
+    if (slides.length <= 1) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
@@ -166,13 +165,12 @@ export default function HeroSection() {
           <h1 className="hero-title opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-foreground leading-tight mb-6">
             نصنع حضورك الرقمي
             <br />
-            <span className="text-gold">ونحوّل أفكارك</span> إلى نتائج حقيقية
+            عبر <span className="text-gold">برمجة مواقع وتطبيقات</span> مبتكرة
           </h1>
 
           {/* Description */}
           <p className="hero-description opacity-0 text-base md:text-lg text-muted leading-relaxed max-w-2xl mb-10">
-            حلول متكاملة في التسويق الرقمي، تصميم المواقع، تطوير الأنظمة،
-            وتطبيقات الموبايل لمساعدتك على النمو والوصول إلى عملائك باحترافية.
+            شريكك الأول في التسويق الرقمي والتسويق في السعودية. نقدم خدمات برمجية متكاملة تشمل برمجة خاصة وتطوير تطبيقات وادارة حملات التسويق الالكتروني لتعزيز نمو أعمالك ومبيعاتك باحترافية.
           </p>
 
           {/* Buttons */}

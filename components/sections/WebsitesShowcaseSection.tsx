@@ -41,22 +41,22 @@ const showcaseItems: WebsiteItem[] = [
     description: "موقع احترافي متكامل يعرض خدمات وحلول المجموعة الإعلانية والتسويقية بهوية بصرية مميزة."
   },
   {
-    id: "roshnreit",
-    title: "صندوق روشن ريت العقاري",
-    type: "منصة استثمارية عقارية",
+    id: "cleanshine",
+    title: "شركة كلين شاين للخدمات",
+    type: "موقع حجز خدمات التنظيف",
     category: "website",
-    url: "https://www.roshnreit.com/ar",
-    displayUrl: "roshnreit.com/ar",
-    description: "منصة مالية عقارية تفاعلية مخصصة للمستثمرين تعرض بيانات الصندوق والأصول العقارية والتقارير المالية."
+    url: "https://cleanshine.vercel.app/",
+    displayUrl: "cleanshine.vercel.app",
+    description: "تصميم وتطوير موقع إلكتروني تعريفي حديث لخدمات التنظيف يتيح للعملاء حجز المواعيد واستكشاف باقات الخدمات بسهولة."
   },
   {
-    id: "makzanelc",
-    title: "متجر مخزن الإلكتروني",
+    id: "rebunesastore",
+    title: "متجر ريبون الإلكتروني",
     type: "متجر إلكتروني متكامل",
     category: "store",
-    url: "https://makzanelc.com/",
-    displayUrl: "makzanelc.com",
-    description: "متجر إلكتروني عصري متخصص في بيع وتوزيع الأجهزة الإلكترونية ومستلزمات الجوال الذكية.",
+    url: "https://rebunesastore.com/",
+    displayUrl: "rebunesastore.com",
+    description: "متجر إلكتروني حديث لبراند ريبون الشهير للأجهزة المنزلية وأدوات التجميل يتميز بالسرعة وتجربة التسوق السلسة.",
     isMocked: true
   }
 ];
@@ -108,7 +108,7 @@ export default function WebsitesShowcaseSection() {
                   {/* Phone Screen Area */}
                   <div className="absolute inset-0 pt-12 pb-4 bg-white overflow-hidden select-none">
                     {item.isMocked ? (
-                      /* Simulated Store Screen (Makzan Electronic) */
+                      /* Simulated Store Screen (Rebunes Store) */
                       <div className="h-full flex flex-col bg-slate-50 overflow-y-auto scrollbar-none text-right text-foreground font-sans">
                         
                         {/* Store Header */}
@@ -116,31 +116,31 @@ export default function WebsitesShowcaseSection() {
                           <div className="flex items-center gap-1.5">
                             <span className="relative">
                               <ShoppingBag className="w-3.5 h-3.5 text-gold" />
-                              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-rose-500 text-white rounded-full text-[6px] flex items-center justify-center">٢</span>
+                              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-rose-500 text-white rounded-full text-[6px] flex items-center justify-center">٣</span>
                             </span>
                             <Search className="w-3.5 h-3.5 text-neutral-300" />
                           </div>
-                          <span className="text-xs font-bold tracking-wide text-gold">مخزن للالكترونيات</span>
+                          <span className="text-xs font-bold tracking-wide text-gold">متجر ريبون</span>
                         </div>
 
                         {/* Store Promo Banner */}
                         <div className="p-2 shrink-0">
                           <div className="bg-gradient-to-l from-gold to-primary-dark text-white p-2.5 rounded-lg text-center shadow-xs">
-                            <div className="text-[9px] font-bold">عروض الصيف الكبرى 🔥</div>
-                            <div className="text-[7px] text-white/90 mt-0.5">خصم يصل إلى 50% على الملحقات</div>
-                            <div className="inline-block bg-white/20 text-[6px] px-1 py-0.5 rounded-md mt-1 font-bold">كود: QIMMA</div>
+                            <div className="text-[9px] font-bold">خصومات ريبون الكبرى 🌟</div>
+                            <div className="text-[7px] text-white/90 mt-0.5">أجهزة التجميل والمنزل بخصم 40%</div>
+                            <div className="inline-block bg-white/20 text-[6px] px-1 py-0.5 rounded-md mt-1 font-bold">كود: REBUNE</div>
                           </div>
                         </div>
 
                         {/* Store Categories */}
                         <div className="px-2 mb-2 shrink-0">
-                          <div className="text-[8px] font-bold text-slate-700 mb-1.5">الأقسام الرئيسية</div>
+                          <div className="text-[8px] font-bold text-slate-700 mb-1.5">الأقسام</div>
                           <div className="grid grid-cols-4 gap-1">
                             {[
-                              { label: "جوالات", icon: Smartphone },
-                              { label: "سماعات", icon: Headphones },
-                              { label: "شواحن", icon: Zap },
-                              { label: "إلكترونيات", icon: Laptop },
+                              { label: "أجهزة شعر", icon: Sparkles },
+                              { label: "أجهزة مطبخ", icon: Zap },
+                              { label: "أجهزة منزلية", icon: ShoppingBag },
+                              { label: "جديدنا", icon: Star },
                             ].map((cat, cIdx) => (
                               <div key={cIdx} className="bg-white p-1 rounded-md border border-slate-100 flex flex-col items-center justify-center gap-0.5">
                                 <cat.icon className="w-3 h-3 text-primary" />
@@ -154,33 +154,33 @@ export default function WebsitesShowcaseSection() {
                         <div className="px-2 flex-grow">
                           <div className="text-[8px] font-bold text-slate-700 mb-1.5 flex justify-between items-center">
                             <span className="text-[6px] text-primary font-semibold">عرض الكل</span>
-                            <span>الأكثر مبيعاً ⭐</span>
+                            <span>الأكثر طلباً 🔥</span>
                           </div>
                           
                           <div className="grid grid-cols-2 gap-2">
                             {[
                               {
-                                name: "سماعة بلوتوث رياضية Pro",
-                                price: "١٤٩ ر.س",
-                                oldPrice: "٢٩٩ ر.س",
+                                name: "مصفف شعر ريبون 2 في 1",
+                                price: "١٩٩ ر.س",
+                                oldPrice: "٣٩٩ ر.س",
                                 rating: "٤.٩",
-                                icon: Headphones,
-                                color: "from-blue-500 to-indigo-600"
+                                icon: Sparkles,
+                                color: "from-pink-400 to-rose-600"
                               },
                               {
-                                name: "شاحن سفري سريع ٢٠ واط",
-                                price: "٦٩ ر.س",
-                                oldPrice: "١٣٩ ر.س",
+                                name: "محضرة قهوة ريبون 15 بار",
+                                price: "٢٤٩ ر.س",
+                                oldPrice: "٤٩٩ ر.س",
                                 rating: "٤.٨",
                                 icon: Zap,
-                                color: "from-amber-400 to-orange-500"
+                                color: "from-purple-500 to-indigo-600"
                               }
                             ].map((prod, pIdx) => (
                               <div key={pIdx} className="bg-white p-1.5 rounded-lg border border-slate-100 shadow-2xs flex flex-col justify-between">
                                 {/* CSS Thumbnail */}
                                 <div className={`aspect-square w-full rounded-md bg-gradient-to-br ${prod.color} flex items-center justify-center text-white mb-1.5 relative overflow-hidden`}>
                                   <prod.icon className="w-6 h-6 drop-shadow-md" />
-                                  <span className="absolute top-0.5 right-0.5 bg-rose-500 text-white text-[5px] px-1 rounded-sm font-bold">خصم</span>
+                                  <span className="absolute top-0.5 right-0.5 bg-rose-500 text-white text-[5px] px-1 rounded-sm font-bold">أفضل سعر</span>
                                 </div>
                                 <h4 className="text-[7px] font-bold text-slate-800 line-clamp-1 mb-0.5">{prod.name}</h4>
                                 <div className="flex items-center justify-between text-[6px] mb-1">
@@ -199,7 +199,7 @@ export default function WebsitesShowcaseSection() {
                         {/* Interactive overlay for mockup */}
                         <div className="absolute inset-0 bg-primary-dark/80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center z-10">
                           <Sparkles className="w-6 h-6 text-gold mb-2 animate-bounce" />
-                          <h4 className="text-xs font-bold text-white mb-1">متجر مخزن الإلكتروني</h4>
+                          <h4 className="text-xs font-bold text-white mb-1">متجر ريبون الإلكتروني</h4>
                           <p className="text-[9px] text-white/80 mb-3 leading-relaxed">الموقع محمي ضد التضمين الخارجي. انقر لتجربة المتجر المباشر على سلة</p>
                           <a 
                             href={item.url} 

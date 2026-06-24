@@ -7,7 +7,6 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import SystemsSection from "@/components/sections/SystemsSection";
 import WebsitesShowcaseSection from "@/components/sections/WebsitesShowcaseSection";
 import WhyQimmaSection from "@/components/sections/WhyQimmaSection";
-import PackagesSection from "@/components/sections/PackagesSection";
 import StatsSection from "@/components/sections/StatsSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import ClientsSection from "@/components/sections/ClientsSection";
@@ -28,7 +27,6 @@ export default function Home() {
         <SystemsSection />
         <WebsitesShowcaseSection />
         <WhyQimmaSection />
-        <PackagesSection />
         <StatsSection />
         <PortfolioSection />
         <ClientsSection />

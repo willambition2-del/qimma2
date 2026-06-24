@@ -31,6 +31,7 @@ export interface PortfolioItem {
   category: string;
   image: string;
   tags: string[];
+  url?: string;
 }
 
 export interface ClientLogo {
