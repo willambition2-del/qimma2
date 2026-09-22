@@ -36,7 +36,7 @@ export default function ContactPageContent() {
       <PageHeader badge="ابقى على اتصال"
         title={<>تواصل معنا <span className="text-gold">اليوم</span></>}
         description="فريقنا جاهز دائمًا لمناقشة فكرتك وتقديم أفضل الحلول الرقمية لمشروعك. راسلنا أو اتصل بنا وسنسعد بخدمتك."
-        imageSrc="/images/hero/slide-1.png" />
+        imageSrc="/images/hero/slide-2.png" />
 
       {/* Contact Cards & Form split */}
       <section className="section-padding">

@@ -10,10 +10,11 @@ export interface CountryCode {
 }
 
 export const contactServices: ContactService[] = [
-  { id: 'info-websites', label: 'موقع تعريفي' },
-  { id: 'e-commerce', label: 'متجر إلكتروني' },
-  { id: 'custom-systems', label: 'تطوير الأنظمة المخصصة' },
-  { id: 'mobile-apps', label: 'تطوير تطبيقات الموبايل' },
+  { id: 'digital-marketing', label: 'التسويق الإلكتروني' },
+  { id: 'web-development', label: 'تصميم وتطوير المواقع' },
+  { id: 'ecommerce', label: 'تصميم وتطوير المتاجر الإلكترونية' },
+  { id: 'systems', label: 'تطوير الأنظمة' },
+  { id: 'mobile-apps', label: 'تطوير التطبيقات' },
 ];
 
 export const countryCodes: CountryCode[] = [
@@ -34,4 +35,4 @@ export const countryCodes: CountryCode[] = [
   { code: '+967', country: 'اليمن', flag: '🇾🇪' },
 ];
 
-export const whatsappNumber = '+966504469214';
+export const whatsappNumber = '+966531539622';

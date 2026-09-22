@@ -88,7 +88,7 @@ export default function ArticlesPageContent() {
       <PageHeader badge="مقالات وأفكار"
         title="المدونة المعرفية"
         description="نشاركك خبراتنا في البرمجة والتسويق لمساعدتك على أخذ قرارات أفضل وتنمية تجارتك بذكاء."
-        imageSrc="/images/hero/slide-3.png" />
+        imageSrc="/images/hero/slide-2.png" />
 
       {/* Filters & Search controls */}
       <section className="pt-16 pb-8">

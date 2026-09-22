@@ -4,9 +4,29 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X, Phone } from "lucide-react";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Phone,
+  Megaphone,
+  Globe,
+  ShoppingBag,
+  Settings,
+  Smartphone,
+  ArrowLeft,
+  type LucideIcon,
+} from "lucide-react";
 import { mainNavItems } from "@/data/navigation";
 import { siteConfig } from "@/data/site-config";
+
+const navServiceIcons: Record<string, LucideIcon> = {
+  "/services/digital-marketing": Megaphone,
+  "/services/web-development": Globe,
+  "/services/ecommerce": ShoppingBag,
+  "/services/systems": Settings,
+  "/services/mobile-apps": Smartphone,
+};
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import Button from "@/components/ui/Button";
 import { usePathname } from "next/navigation";
@@ -104,18 +124,36 @@ export default function Header() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.96 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full end-0 mt-2 w-56 bg-white rounded-xl shadow-elevated border border-border overflow-hidden"
+                            className="absolute top-full end-0 mt-2 w-72 bg-white rounded-2xl shadow-elevated border border-border overflow-hidden p-2"
                           >
-                            {item.children.map((child) => (
+                            <div className="space-y-1">
+                              {item.children.map((child) => {
+                                const Icon = navServiceIcons[child.href] || Globe;
+                                return (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-foreground hover:bg-primary-light hover:text-primary transition-colors group"
+                                    onClick={() => setActiveDropdown(null)}
+                                  >
+                                    <div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors shrink-0 shadow-2xs">
+                                      <Icon className="w-4 h-4" />
+                                    </div>
+                                    <span className="font-semibold">{child.label}</span>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                            <div className="mt-2 pt-2 border-t border-border/60 px-2">
                               <Link
-                                key={child.href}
-                                href={child.href}
-                                className="block px-4 py-3 text-sm text-foreground hover:bg-primary-light hover:text-primary transition-colors border-b border-border/50 last:border-0"
+                                href="/services"
+                                className="flex items-center justify-between text-xs font-bold text-primary hover:text-gold transition-colors py-1.5 px-2 rounded-lg hover:bg-surface"
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                {child.label}
+                                <span>استعراض كافة الخدمات</span>
+                                <ArrowLeft className="w-3.5 h-3.5 rtl-flip" />
                               </Link>
-                            ))}
+                            </div>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -252,18 +290,32 @@ export default function Header() {
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.2 }}
-                              className="overflow-hidden bg-surface"
+                              className="overflow-hidden bg-surface divide-y divide-border/40"
                             >
-                              {item.children.map((child) => (
+                              {item.children.map((child) => {
+                                const Icon = navServiceIcons[child.href] || Globe;
+                                return (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    className="flex items-center gap-3 px-8 py-3 text-sm text-foreground hover:bg-white hover:text-primary transition-colors"
+                                    onClick={() => setIsMobileOpen(false)}
+                                  >
+                                    <Icon className="w-4 h-4 text-primary shrink-0" />
+                                    <span className="font-medium">{child.label}</span>
+                                  </Link>
+                                );
+                              })}
+                              <div className="px-8 py-3 bg-white/60">
                                 <Link
-                                  key={child.href}
-                                  href={child.href}
-                                  className="block px-10 py-3 text-sm text-muted hover:text-primary transition-colors"
+                                  href="/services"
+                                  className="inline-flex items-center gap-2 text-xs font-bold text-primary hover:text-gold"
                                   onClick={() => setIsMobileOpen(false)}
                                 >
-                                  {child.label}
+                                  <span>كافة الخدمات الرقمية</span>
+                                  <ArrowLeft className="w-3.5 h-3.5 rtl-flip" />
                                 </Link>
-                              ))}
+                              </div>
                             </motion.div>
                           )}
                         </AnimatePresence>

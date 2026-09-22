@@ -24,7 +24,7 @@ export default function TermsPage() {
         <PageHeader badge="الاتفاقية التنظيمية"
         title="الشروط والأحكام"
         description="تحدد هذه الاتفاقية البنود والشروط القانونية والتنظيمية لاستخدام خدمات موقع قمة للتسويق والبرمجة."
-        imageSrc="/images/hero/slide-1.png" />
+        imageSrc="/images/hero/slide-2.png" />
 
         {/* Content */}
         <section className="section-padding">

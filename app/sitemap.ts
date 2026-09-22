@@ -1,25 +1,31 @@
 import { MetadataRoute } from "next";
+import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://qimmaaa.com";
 
-  const routes = [
+  const staticRoutes = [
     "",
     "/about",
     "/services",
-    "/services/info-websites",
-    "/services/e-commerce",
-    "/services/custom-systems",
-    "/services/mobile-apps",
     "/packages",
-    "/portfolio",
     "/articles",
     "/contact",
     "/privacy-policy",
     "/terms",
   ];
 
-  return routes.map((route) => ({
+  // Main services
+  const mainServiceRoutes = services.map((s) => `/services/${s.slug}`);
+
+  // Sub-services
+  const subServiceRoutes = services.flatMap((s) =>
+    s.subServices.map((sub) => `/services/${s.slug}/${sub.slug}`)
+  );
+
+  const allRoutes = [...staticRoutes, ...mainServiceRoutes, ...subServiceRoutes];
+
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",

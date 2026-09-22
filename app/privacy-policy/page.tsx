@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
         <PageHeader badge="الأمان والسرية"
         title="سياسة الخصوصية"
         description="نهتم بخصوصية بياناتك وسريتها. يوضح هذا المستند كيفية جمع معلوماتك واستخدامها وحمايتها."
-        imageSrc="/images/hero/slide-1.png" />
+        imageSrc="/images/hero/slide-2.png" />
 
         {/* Content */}
         <section className="section-padding">

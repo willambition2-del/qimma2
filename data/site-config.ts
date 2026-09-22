@@ -9,8 +9,8 @@ export const siteConfig: SiteConfig = {
   locale: 'ar-SA',
   direction: 'rtl',
   contact: {
-    phone: '0504469214',
-    whatsapp: '+966504469214',
+    phone: '0531539622',
+    whatsapp: '+966531539622',
     email: 'info@qimmaaa.com',
   },
 };

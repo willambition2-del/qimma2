@@ -1,27 +1,25 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
-import MobileAppsContent from "./MobileAppsContent";
+import { notFound } from "next/navigation";
+import { getServiceBySlug } from "@/data/services";
+import ServiceDetailPage from "@/components/sections/ServiceDetailPage";
 
 export const metadata: Metadata = {
-  title: "شركة برمجة تطبيقات وتصميم تطبيقات الجوال",
-  description: "نحن شركة تصميم تطبيقات وشركة انشاء تطبيقات متخصصة تقدم خدمات برمجة تطبيقات الجوال وتطوير تطبيقات الجوال لنظامي iOS و Android مع مبرمج تطبيقات محترف.",
+  title: "تصميم وتطوير تطبيقات الجوال لنظامي iOS و Android | قمة",
+  description:
+    "برمجة تطبيقات الهواتف الذكية الأصلية (Swift, Kotlin) والهجينة (Flutter, React Native)، تطبيقات المتاجر، الحجز، وتطبيقات الأنظمة الإدارية ونشرها على App Store و Google Play.",
   openGraph: {
-    title: "شركة برمجة تطبيقات وتصميم تطبيقات الجوال | قمة",
-    description: "أفضل شركة تطوير تطبيقات في السعودية تقدم حلول تصميم تطبيقات الجوال وتطويرها بأحدث التقنيات وأقوى أداء.",
+    title: "تصميم وتطوير تطبيقات الجوال | قمة للتسويق والبرمجة",
+    description:
+      "تطوير وتصميم تطبيقات الهواتف الذكية لنظامي iOS و Android بأحدث التقنيات وأعلى معايير الأداء والاعتماد في المتاجر.",
+  },
+  alternates: {
+    canonical: "/services/mobile-apps",
   },
 };
 
 export default function MobileAppsPage() {
-  return (
-    <>
-      <Header />
-      <main>
-        <MobileAppsContent />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </>
-  );
+  const service = getServiceBySlug("mobile-apps");
+  if (!service) notFound();
+
+  return <ServiceDetailPage service={service} />;
 }

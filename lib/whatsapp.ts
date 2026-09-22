@@ -2,7 +2,7 @@
  * WhatsApp URL builder utility
  */
 
-const WHATSAPP_NUMBER = '966504469214';
+const WHATSAPP_NUMBER = '966531539622';
 
 export function buildWhatsAppUrl(message: string): string {
   const encoded = encodeURIComponent(message);

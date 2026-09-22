@@ -4,13 +4,42 @@ export interface NavItem {
   children?: NavItem[];
 }
 
+export interface SubService {
+  id: string;
+  slug: string;
+  title: string;
+  shortDescription: string;
+  description?: string;
+  icon?: string;
+  features?: string[];
+}
+
+export interface ServiceAdvantage {
+  title: string;
+  description: string;
+}
+
+export interface ServiceProcessStep {
+  step: string;
+  title: string;
+  description: string;
+}
+
 export interface Service {
   id: string;
+  slug: string;
   title: string;
+  shortDescription: string;
   description: string;
   icon: string;
   href: string;
+  badge: string;
   features?: string[];
+  subServices: SubService[];
+  advantages?: ServiceAdvantage[];
+  process?: ServiceProcessStep[];
+  ctaTitle?: string;
+  ctaDescription?: string;
 }
 
 export interface Package {
@@ -24,15 +53,6 @@ export interface Package {
   badge?: string;
 }
 
-export interface PortfolioItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-  tags: string[];
-  url?: string;
-}
 
 export interface ClientLogo {
   id: string;
@@ -107,7 +127,4 @@ export interface TrustItem {
   icon: string;
 }
 
-export type PortfolioCategory = {
-  id: string;
-  label: string;
-};
+

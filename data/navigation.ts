@@ -14,29 +14,29 @@ export const mainNavItems: NavItem[] = [
     href: '/services',
     children: [
       {
-        label: 'المواقع التعريفية',
-        href: '/services/info-websites',
+        label: 'التسويق الإلكتروني',
+        href: '/services/digital-marketing',
       },
       {
-        label: 'المتاجر الإلكترونية',
-        href: '/services/e-commerce',
+        label: 'تصميم وتطوير المواقع',
+        href: '/services/web-development',
       },
       {
-        label: 'تطوير الأنظمة المخصصة',
-        href: '/services/custom-systems',
+        label: 'تصميم وتطوير المتاجر',
+        href: '/services/ecommerce',
       },
       {
-        label: 'تطوير تطبيقات الموبايل',
+        label: 'تطوير الأنظمة',
+        href: '/services/systems',
+      },
+      {
+        label: 'تطوير التطبيقات',
         href: '/services/mobile-apps',
       },
     ],
   },
   {
-    label: 'أعمالنا',
-    href: '/portfolio',
-  },
-  {
-    label: 'المقالات',
+    label: 'المدونة',
     href: '/articles',
   },
   {
