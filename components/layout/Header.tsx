@@ -85,9 +85,9 @@ export default function Header() {
               <Image
                 src="/brand/qimma-logo.png"
                 alt={siteConfig.name}
-                width={100}
-                height={40}
-                className={`h-10 w-auto transition-all duration-300 ${(isScrolled || isHomePage) ? "" : "brightness-0 invert"}`}
+                width={120}
+                height={48}
+                className={`h-11 sm:h-12 w-auto transition-all duration-300 ${(isScrolled || isHomePage) ? "" : "brightness-0 invert"}`}
                 priority
               />
             </Link>
@@ -244,9 +244,9 @@ export default function Header() {
                 <Image
                   src="/brand/qimma-logo.png"
                   alt={siteConfig.name}
-                  width={80}
-                  height={32}
-                  className="h-8 w-auto"
+                  width={100}
+                  height={40}
+                  className="h-9 w-auto"
                 />
                 <button
                   onClick={() => setIsMobileOpen(false)}

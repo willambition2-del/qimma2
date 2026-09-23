@@ -1,15 +1,37 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Check, ArrowLeft } from "lucide-react";
+import {
+  Code2,
+  Smartphone,
+  TrendingUp,
+  ShieldCheck,
+  ArrowLeft,
+  Sparkles,
+} from "lucide-react";
 import Button from "@/components/ui/Button";
-import Badge from "@/components/ui/Badge";
 
-const bulletPoints = [
-  "فريق متعدد التخصصات يجمع بين التسويق الالكتروني والبرمجة والتصميم",
-  "مشاريع منجزة في برمجة مواقع وتطبيقات الهواتف المتنوعة",
-  "شركة برمجة تطبيقات تقدم حلولاً مخصصة تناسب احتياجات كل عميل",
-  "دعم فني مستمر وصيانة دورية تقدمها أفضل شركات البرمجة",
+const services = [
+  {
+    icon: Code2,
+    title: "تطوير وبرمجة المواقع",
+    desc: "منصات ومواقع ويب فائقة السرعة بتجربة مستخدم تفاعلية.",
+  },
+  {
+    icon: Smartphone,
+    title: "برمجة تطبيقات الجوال",
+    desc: "تطبيقات ذكية لنظامي iOS وأندرويد بأعلى معايير الأداء.",
+  },
+  {
+    icon: TrendingUp,
+    title: "التسويق ونمو المبيعات",
+    desc: "استراتيجيات وحملات إعلانية مدروسة تضاعف مبيعاتك.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "أنظمة مخصصة ودعم فني",
+    desc: "حلول سحابية لإدارة أعمالك مع صيانة ومتابعة مستمرة.",
+  },
 ];
 
 export default function AboutSection() {
@@ -38,48 +60,42 @@ export default function AboutSection() {
             start: "top 75%",
             once: true,
           },
+          defaults: { ease: "power3.out" },
         });
 
         tl.fromTo(
-          ".about-visual",
-          { opacity: 0, x: 60, scale: 0.95 },
-          { opacity: 1, x: 0, scale: 1, duration: 0.9, ease: "power3.out" }
+          ".about-badge",
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.4 }
         )
           .fromTo(
-            ".about-badge",
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
-            "-=0.5"
-          )
-          .fromTo(
             ".about-title",
-            { opacity: 0, y: 25 },
-            { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
-            "-=0.3"
-          )
-          .fromTo(
-            ".about-desc",
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
-            "-=0.3"
-          )
-          .fromTo(
-            ".about-bullet",
-            { opacity: 0, x: -15 },
-            {
-              opacity: 1,
-              x: 0,
-              duration: 0.4,
-              stagger: 0.1,
-              ease: "power3.out",
-            },
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.5 },
             "-=0.2"
           )
           .fromTo(
-            ".about-cta",
+            ".about-desc",
             { opacity: 0, y: 15 },
-            { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
-            "-=0.1"
+            { opacity: 1, y: 0, duration: 0.4 },
+            "-=0.2"
+          )
+          .fromTo(
+            ".about-action",
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.4 },
+            "-=0.2"
+          )
+          .fromTo(
+            ".about-card",
+            { opacity: 0, y: 15 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.4,
+              stagger: 0.08,
+            },
+            "-=0.2"
           );
       }, el);
     };
@@ -94,89 +110,77 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="section-padding bg-white"
+      className="py-16 lg:py-20 bg-white"
       id="about-preview"
     >
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div className="order-1">
-            <div className="about-badge opacity-0 mb-5">
-              <Badge variant="gold">5 سنوات من الخبرة</Badge>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          {/* Main Info Column */}
+          <div className="lg:col-span-6">
+            
+            {/* Minimalist Badge */}
+            <div className="about-badge opacity-0 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-soft border border-gold/25 text-gold text-xs font-bold mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>5 سنوات من الريادة التقنية والتسويقية</span>
             </div>
 
+            {/* Title */}
             <div className="about-title opacity-0">
-              <div className="gold-accent-line mb-5" />
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
-                شريكك نحو النجاح الرقمي
+              <div className="gold-accent-line mb-4" />
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-foreground leading-[1.3] tracking-tight">
+                نجمع بين <span className="text-primary">قوة البرمجة</span>{" "}
+                و<span className="text-gold">ذكاء التسويق</span>
               </h2>
             </div>
 
-            <p className="about-desc opacity-0 mt-5 text-base md:text-lg text-muted leading-relaxed max-w-xl">
-              بصفتنا وكالة تسويقية رائدة في المملكة، نؤمن أن كل مشروع يستحق حضورًا رقميًا يعكس قيمته الحقيقية. نعمل مع عملائنا كشركاء، فنقوم بـ برمجة موقع الكتروني أو تطبيق جوال يخدم أهدافهم بفاعلية كاملة.
+            {/* Description - Short & Punchy */}
+            <p className="about-desc opacity-0 mt-4 text-sm sm:text-base text-muted leading-relaxed max-w-lg">
+              وكالة سعودية متخصصة في تطوير البرمجيات والتسويق الرقمي. نبتكر مواقع ويب سريعة، تطبيقات جوال ذكية، وحملات تسويقية مدروسة تعزز حضورك وتضمن نمو مبيعاتك.
             </p>
 
-            <ul className="mt-7 space-y-3">
-              {bulletPoints.map((point, idx) => (
-                <li
-                  key={idx}
-                  className="about-bullet opacity-0 flex items-start gap-3"
-                >
-                  <span className="mt-1 shrink-0 w-5 h-5 rounded-full bg-primary-light flex items-center justify-center">
-                    <Check
-                      className="w-3 h-3 text-primary"
-                      strokeWidth={2.5}
-                    />
-                  </span>
-                  <span className="text-sm md:text-base text-foreground leading-relaxed">
-                    {point}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="about-cta opacity-0 mt-9">
+            {/* CTA Action */}
+            <div className="about-action opacity-0 mt-7">
               <Button
                 variant="primary"
                 href="/about"
                 icon={<ArrowLeft className="w-4 h-4 rtl-flip" />}
                 iconPosition="end"
+                size="md"
               >
                 تعرّف علينا أكثر
               </Button>
             </div>
+
           </div>
 
-          {/* Visual Placeholder */}
-          <div className="order-2 about-visual opacity-0">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              {/* Gradient placeholder simulating an image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-primary rounded-2xl" />
-
-              {/* Decorative elements */}
-              <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-              <div className="absolute top-6 end-6 w-20 h-20 rounded-full bg-gold/20 blur-xl" />
-              <div className="absolute bottom-8 start-8 w-32 h-32 rounded-full bg-primary-light/10 blur-2xl" />
-
-              {/* Inner content mockup */}
-              <div className="absolute inset-6 rounded-xl border border-white/10 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gold/20 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-gold font-inter">
-                      Q
-                    </span>
+          {/* 4 Clean Lightweight Cards */}
+          <div className="lg:col-span-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {services.map((item, idx) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="about-card opacity-0 group p-4 sm:p-5 rounded-2xl bg-surface/50 border border-border/70 hover:bg-white hover:border-gold/30 hover:shadow-card transition-all duration-300"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-primary-light/80 text-primary group-hover:bg-primary group-hover:text-white flex items-center justify-center mb-3 transition-colors duration-300">
+                      <IconComponent className="w-5 h-5" strokeWidth={2} />
+                    </div>
+                    
+                    <h3 className="text-sm sm:text-base font-bold text-foreground mb-1.5 group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-xs text-muted leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
-                  <p className="text-white/60 text-sm">قمة للتسويق والبرمجة</p>
-                </div>
-              </div>
-
-              {/* Corner accent */}
-              <div className="absolute top-0 start-0 w-16 h-16">
-                <div className="absolute top-0 start-0 w-full h-[3px] bg-gold" />
-                <div className="absolute top-0 start-0 h-full w-[3px] bg-gold" />
-              </div>
+                );
+              })}
             </div>
           </div>
+
         </div>
       </div>
     </section>

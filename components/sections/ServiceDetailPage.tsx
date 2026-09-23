@@ -22,7 +22,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
-import type { Service } from "@/types";
+import type { Service, SubService } from "@/types";
+import ServiceDetailsModal from "@/components/ui/ServiceDetailsModal";
 
 interface ServiceDetailPageProps {
   service: Service;
@@ -35,6 +36,8 @@ export default function ServiceDetailPage({
 }: ServiceDetailPageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.45);
+  const [selectedSubService, setSelectedSubService] = useState<SubService | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (!showSystemDemo) return;
@@ -169,13 +172,17 @@ export default function ServiceDetailPage({
 
                       {/* Actions */}
                       <div className="pt-4 border-t border-border/40 flex items-center justify-between gap-3 mt-auto">
-                        <Link
-                          href={`/services/${service.slug}/${sub.slug}`}
-                          className="text-xs font-bold text-primary hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedSubService(sub);
+                            setIsModalOpen(true);
+                          }}
+                          className="text-xs font-bold text-primary hover:text-gold transition-colors inline-flex items-center gap-1.5 cursor-pointer"
                         >
                           تفاصيل الخدمة
                           <ArrowLeft className="w-3.5 h-3.5 rtl-flip" />
-                        </Link>
+                        </button>
                         <a
                           href={subWhatsappUrl}
                           target="_blank"
@@ -388,6 +395,13 @@ export default function ServiceDetailPage({
           </div>
         </section>
       </main>
+
+      <ServiceDetailsModal
+        subService={selectedSubService}
+        parentServiceTitle={service.title}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
 
       <Footer />
       <WhatsAppButton />
