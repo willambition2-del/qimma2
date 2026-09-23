@@ -67,31 +67,37 @@ export default function HeroSection() {
             "-=0.2"
           );
 
-        // Floating orbs animation
-        gsap.to(".hero-orb-1", {
-          y: -20,
-          x: 10,
-          duration: 4,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
-        gsap.to(".hero-orb-2", {
-          y: 15,
-          x: -15,
-          duration: 5,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
-        gsap.to(".hero-orb-3", {
-          y: -10,
-          x: 20,
-          duration: 6,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
+        // Floating orbs animation if present
+        if (heroRef.current?.querySelector(".hero-orb-1")) {
+          gsap.to(".hero-orb-1", {
+            y: -20,
+            x: 10,
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          });
+        }
+        if (heroRef.current?.querySelector(".hero-orb-2")) {
+          gsap.to(".hero-orb-2", {
+            y: 15,
+            x: -15,
+            duration: 5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          });
+        }
+        if (heroRef.current?.querySelector(".hero-orb-3")) {
+          gsap.to(".hero-orb-3", {
+            y: -10,
+            x: 20,
+            duration: 6,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          });
+        }
       }, heroRef);
     };
 
@@ -203,13 +209,13 @@ export default function HeroSection() {
           </div>
 
           {/* Stats Mini */}
-          <div className="hero-stats flex flex-wrap items-center gap-6 md:gap-10">
+          <div className="hero-stats flex items-center justify-center gap-6 sm:gap-10 text-center w-full">
             {stats.slice(0, 3).map((stat, idx) => (
-              <div key={idx} className="text-center">
+              <div key={idx} className="text-center shrink-0">
                 <div className="font-inter text-2xl md:text-3xl font-bold text-gold">
                   {stat.value > 10 && "+"}{stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-muted mt-1">
+                <div className="text-xs md:text-sm text-muted mt-1 whitespace-nowrap">
                   {stat.label}
                 </div>
               </div>

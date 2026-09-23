@@ -129,14 +129,14 @@ export default function AboutSection() {
             <div className="about-title opacity-0">
               <div className="gold-accent-line mb-4" />
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-foreground leading-[1.3] tracking-tight">
-                نجمع بين <span className="text-primary">قوة البرمجة</span>{" "}
-                و<span className="text-gold">ذكاء التسويق</span>
+                <span className="text-primary">برمجيات قوية</span>{" "}
+                و<span className="text-gold">تسويق ذكي</span>
               </h2>
             </div>
 
             {/* Description - Short & Punchy */}
             <p className="about-desc opacity-0 mt-4 text-sm sm:text-base text-muted leading-relaxed max-w-lg">
-              وكالة سعودية متخصصة في تطوير البرمجيات والتسويق الرقمي. نبتكر مواقع ويب سريعة، تطبيقات جوال ذكية، وحملات تسويقية مدروسة تعزز حضورك وتضمن نمو مبيعاتك.
+              وكالة سعودية متخصصة تبتكر تطبيقات جوال ذكية، وحملات تسويقية مدروسة تعزز حضورك وتضمن نمو مبيعاتك.
             </p>
 
             {/* CTA Action */}
