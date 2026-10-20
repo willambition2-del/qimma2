@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" dir="rtl">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EEE7" />
+    </linearGradient>
+    <pattern id="dotGrid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#AD8665" opacity="0.12" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Soft Accent Corner Ribbon -->
+  <path d="M0 0 L260 0 L0 260 Z" fill="#E8D8C7" opacity="0.45" />
+
+  <!-- Left/Center Content Area -->
+  <g transform="translate(100, 140)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="180" height="38" rx="19" fill="#283831" />
+    <text x="90" y="24" fill="#FAF8F5" font-size="15" font-weight="600" text-anchor="middle" font-family="'IBM Plex Sans Arabic', sans-serif">الأتمتة والأنظمة</text>
+
+    <!-- Badge -->
+    <rect x="195" y="0" width="160" height="38" rx="19" fill="#FFFFFF" stroke="#AD8665" stroke-width="1.5" />
+    <text x="275" y="24" fill="#AD8665" font-size="14" font-weight="600" text-anchor="middle" font-family="'IBM Plex Sans Arabic', sans-serif">دليل الأتمتة والمبيعات</text>
+
+    <!-- Main Title (2-3 lines simulated with tspans) -->
+    <text x="0" y="115" fill="#283831" font-size="34" font-weight="bold" font-family="'IBM Plex Sans Arabic', sans-serif" line-height="1.4">
+      ربط واتساب للأعمال بنظام CRM للشركات
+    </text>
+
+    <!-- Publisher Branding -->
+    <g transform="translate(0, 240)">
+      <circle cx="18" cy="18" r="18" fill="#AD8665" />
+      <text x="18" y="24" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">ق</text>
+      <text x="50" y="24" fill="#283831" font-size="18" font-weight="bold" font-family="'IBM Plex Sans Arabic', sans-serif">قمة للتسويق والبرمجة</text>
+      <text x="235" y="24" fill="#777B75" font-size="15" font-family="'IBM Plex Sans Arabic', sans-serif">• أكتوبر 2026</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Illustration Block -->
+  <g>
+    <!-- Background circular aura -->
+    <circle cx="860" cy="315" r="210" fill="#FFFFFF" opacity="0.6" />
+    <circle cx="860" cy="315" r="210" fill="none" stroke="#E9E4DC" stroke-width="2" />
+    
+        <!-- WhatsApp Speech Bubble to CRM Cards -->
+        <rect x="700" y="210" width="130" height="100" rx="20" fill="#283831" />
+        <circle cx="765" cy="260" r="24" fill="#AD8665" />
+        <!-- Arrow connection -->
+        <path d="M830 260 L870 260" stroke="#AD8665" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4" />
+        <!-- CRM Cards -->
+        <rect x="870" y="190" width="130" height="60" rx="10" fill="#FFFFFF" stroke="#E9E4DC" stroke-width="3" />
+        <rect x="885" y="210" width="60" height="8" rx="3" fill="#283831" />
+        <rect x="885" y="225" width="80" height="6" rx="2" fill="#E8D8C7" />
+
+        <rect x="870" y="270" width="130" height="60" rx="10" fill="#FFFFFF" stroke="#E9E4DC" stroke-width="3" />
+        <rect x="885" y="290" width="70" height="8" rx="3" fill="#AD8665" />
+        <rect x="885" y="305" width="50" height="6" rx="2" fill="#E9E4DC" />
+      
+  </g>
+
+  <!-- Bottom Accent Stripe -->
+  <rect x="0" y="620" width="1200" height="10" fill="#AD8665" />
+</svg>

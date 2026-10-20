@@ -1,13 +1,14 @@
 "use client";
 
+import React from "react";
 import PageHeader from "@/components/ui/PageHeader";
 import Link from "next/link";
-import { Megaphone, Globe, Settings, Smartphone, ShoppingBag, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Megaphone, Globe, Settings, Smartphone, ShoppingBag, ArrowLeft } from "lucide-react";
 import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { services } from "@/data/services";
 
-const iconMap: { [key: string]: any } = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Megaphone,
   Globe,
   Settings,

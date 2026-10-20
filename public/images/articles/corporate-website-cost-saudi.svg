@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" dir="rtl">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EEE7" />
+    </linearGradient>
+    <pattern id="dotGrid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#AD8665" opacity="0.12" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Soft Accent Corner Ribbon -->
+  <path d="M0 0 L260 0 L0 260 Z" fill="#E8D8C7" opacity="0.45" />
+
+  <!-- Left/Center Content Area -->
+  <g transform="translate(100, 140)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="180" height="38" rx="19" fill="#283831" />
+    <text x="90" y="24" fill="#FAF8F5" font-size="15" font-weight="600" text-anchor="middle" font-family="'IBM Plex Sans Arabic', sans-serif">تصميم المواقع</text>
+
+    <!-- Badge -->
+    <rect x="195" y="0" width="160" height="38" rx="19" fill="#FFFFFF" stroke="#AD8665" stroke-width="1.5" />
+    <text x="275" y="24" fill="#AD8665" font-size="14" font-weight="600" text-anchor="middle" font-family="'IBM Plex Sans Arabic', sans-serif">عناصر السعر والعقود</text>
+
+    <!-- Main Title (2-3 lines simulated with tspans) -->
+    <text x="0" y="115" fill="#283831" font-size="34" font-weight="bold" font-family="'IBM Plex Sans Arabic', sans-serif" line-height="1.4">
+      كم تكلفة تصميم موقع شركة في السعودية؟
+    </text>
+
+    <!-- Publisher Branding -->
+    <g transform="translate(0, 240)">
+      <circle cx="18" cy="18" r="18" fill="#AD8665" />
+      <text x="18" y="24" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">ق</text>
+      <text x="50" y="24" fill="#283831" font-size="18" font-weight="bold" font-family="'IBM Plex Sans Arabic', sans-serif">قمة للتسويق والبرمجة</text>
+      <text x="235" y="24" fill="#777B75" font-size="15" font-family="'IBM Plex Sans Arabic', sans-serif">• أكتوبر 2026</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Illustration Block -->
+  <g>
+    <!-- Background circular aura -->
+    <circle cx="860" cy="315" r="210" fill="#FFFFFF" opacity="0.6" />
+    <circle cx="860" cy="315" r="210" fill="none" stroke="#E9E4DC" stroke-width="2" />
+    
+        <!-- Website Blueprint with Price Tag -->
+        <rect x="710" y="190" width="260" height="210" rx="16" fill="#FFFFFF" stroke="#283831" stroke-width="4" filter="drop-shadow(0 10px 22px rgba(40,56,49,0.08))" />
+        <rect x="710" y="190" width="260" height="38" rx="16" fill="#F3EEE7" />
+        <circle cx="735" cy="209" r="5" fill="#AD8665" />
+        <circle cx="750" cy="209" r="5" fill="#E8D8C7" />
+        <!-- Price stamp badge -->
+        <rect x="830" y="320" width="120" height="55" rx="12" fill="#AD8665" />
+        <text x="890" y="355" fill="#FFFFFF" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">SAR 2026</text>
+      
+  </g>
+
+  <!-- Bottom Accent Stripe -->
+  <rect x="0" y="620" width="1200" height="10" fill="#AD8665" />
+</svg>

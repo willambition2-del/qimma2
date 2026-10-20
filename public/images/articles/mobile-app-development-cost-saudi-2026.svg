@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" dir="rtl">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF8F5" />
+      <stop offset="100%" stop-color="#F3EEE7" />
+    </linearGradient>
+    <pattern id="dotGrid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#AD8665" opacity="0.12" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Soft Accent Corner Ribbon -->
+  <path d="M0 0 L260 0 L0 260 Z" fill="#E8D8C7" opacity="0.45" />
+
+  <!-- Left/Center Content Area -->
+  <g transform="translate(100, 140)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="180" height="38" rx="19" fill="#283831" />
+    <text x="90" y="24" fill="#FAF8F5" font-size="15" font-weight="600" text-anchor="middle" font-family="'IBM Plex Sans Arabic', sans-serif">برمجة التطبيقات</text>
+
+    <!-- Badge -->
+    <rect x="195" y="0" width="160" height="38" rx="19" fill="#FFFFFF" stroke="#AD8665" stroke-width="1.5" />
+    <text x="275" y="24" fill="#AD8665" font-size="14" font-weight="600" text-anchor="middle" font-family="'IBM Plex Sans Arabic', sans-serif">من الفكرة حتى النشر</text>
+
+    <!-- Main Title (2-3 lines simulated with tspans) -->
+    <text x="0" y="115" fill="#283831" font-size="34" font-weight="bold" font-family="'IBM Plex Sans Arabic', sans-serif" line-height="1.4">
+      كم تكلفة برمجة تطبيق جوال في السعودية؟
+    </text>
+
+    <!-- Publisher Branding -->
+    <g transform="translate(0, 240)">
+      <circle cx="18" cy="18" r="18" fill="#AD8665" />
+      <text x="18" y="24" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">ق</text>
+      <text x="50" y="24" fill="#283831" font-size="18" font-weight="bold" font-family="'IBM Plex Sans Arabic', sans-serif">قمة للتسويق والبرمجة</text>
+      <text x="235" y="24" fill="#777B75" font-size="15" font-family="'IBM Plex Sans Arabic', sans-serif">• أكتوبر 2026</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Illustration Block -->
+  <g>
+    <!-- Background circular aura -->
+    <circle cx="860" cy="315" r="210" fill="#FFFFFF" opacity="0.6" />
+    <circle cx="860" cy="315" r="210" fill="none" stroke="#E9E4DC" stroke-width="2" />
+    
+        <!-- App Phone + Launch Rocket -->
+        <rect x="720" y="190" width="140" height="250" rx="22" fill="#283831" />
+        <rect x="730" y="205" width="120" height="220" rx="14" fill="#FAF8F5" />
+        <!-- Rocket / Growth -->
+        <path d="M890 320 C890 240, 940 220, 940 220 C940 220, 990 240, 990 320 L940 350 Z" fill="#AD8665" />
+        <circle cx="940" cy="270" r="14" fill="#FAF8F5" />
+        <path d="M930 350 L940 380 L950 350 Z" fill="#E8D8C7" />
+      
+  </g>
+
+  <!-- Bottom Accent Stripe -->
+  <rect x="0" y="620" width="1200" height="10" fill="#AD8665" />
+</svg>

@@ -1,82 +1,74 @@
 "use client";
 
-import { ArrowLeft, Calendar } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-const placeholderArticles = [
-  {
-    id: "article-1",
-    title: "كيف تبني استراتيجية تسويق رقمي ناجحة في 2025",
-    description:
-      "دليل شامل لبناء خطة تسويق رقمي فعّالة تساعدك على الوصول لجمهورك المستهدف وزيادة مبيعاتك بأقل تكلفة.",
-    category: "التسويق الرقمي",
-    date: "15 مايو 2025",
-    gradient: "from-primary to-primary-dark",
-  },
-  {
-    id: "article-2",
-    title: "أهمية تصميم تجربة المستخدم لنجاح متجرك الإلكتروني",
-    description:
-      "تعرّف على كيف يؤثر تصميم UX على معدلات التحويل وولاء العملاء وأهم المبادئ التي يجب اتباعها.",
-    category: "تطوير المواقع",
-    date: "8 مايو 2025",
-    gradient: "from-gold/80 to-primary",
-  },
-  {
-    id: "article-3",
-    title: "5 أخطاء شائعة في إدارة حملات السوشال ميديا وكيف تتجنبها",
-    description:
-      "اكتشف الأخطاء التي يقع فيها أصحاب المشاريع عند إدارة حساباتهم على منصات التواصل وكيفية تجنبها.",
-    category: "السوشال ميديا",
-    date: "1 مايو 2025",
-    gradient: "from-primary-dark to-gold/60",
-  },
-];
+import { getAllArticles } from "@/data/articles";
 
 export default function ArticlesSection() {
+  const articles = getAllArticles().slice(0, 3);
+
   return (
-    <section id="articles" className="section-padding bg-white">
+    <section id="articles" className="section-padding bg-[#FAF8F5]">
       <div className="container-custom">
         <ScrollReveal>
           <SectionHeading
             title="مقالات وأفكار تساعدك على تطوير أعمالك"
-            description="محتوى متخصص نشاركك فيه خبراتنا ونصائح عملية لتنمية أعمالك الرقمية"
+            description="رؤى متخصصة وأدلة استشارية نشاركك فيها خبراتنا لتنمية مشروعك الرقمي في السوق السعودي"
             badge="المدونة"
           />
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {placeholderArticles.map((article, idx) => (
-            <ScrollReveal key={article.id} delay={idx * 0.1}>
-              <article className="group rounded-2xl border border-border bg-white overflow-hidden card-hover h-full flex flex-col">
+          {articles.map((article, idx) => (
+            <ScrollReveal key={article.slug} delay={idx * 0.1}>
+              <article className="group rounded-2xl border border-[#E9E4DC] bg-white overflow-hidden card-hover h-full flex flex-col transition-all duration-300 hover:border-[#AD8665]/40 hover:-translate-y-1">
                 {/* Image */}
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${article.gradient}`}
+                <Link
+                  href={`/articles/${article.slug}`}
+                  className="relative aspect-[16/10] overflow-hidden bg-[#F3EEE7] block"
+                >
+                  <Image
+                    src={article.coverImage}
+                    alt={article.coverImageAlt || article.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
                   {/* Category badge */}
-                  <div className="absolute top-4 start-4">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/90 text-primary rounded-lg backdrop-blur-sm">
+                  <div className="absolute top-4 start-4 z-10">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/95 text-[#283831] rounded-lg backdrop-blur-sm border border-[#E9E4DC]">
                       {article.category}
                     </span>
                   </div>
-                </div>
+                </Link>
 
                 {/* Content */}
-                <div className="flex-1 flex flex-col p-5 lg:p-6">
-                  <h3 className="text-lg font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors duration-200 line-clamp-2">
-                    {article.title}
-                  </h3>
-                  <p className="text-muted text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
-                    {article.description}
-                  </p>
+                <div className="flex-1 flex flex-col p-5 lg:p-6 justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-[#283831] mb-3 leading-snug group-hover:text-[#AD8665] transition-colors duration-200 line-clamp-2">
+                      <Link href={`/articles/${article.slug}`}>
+                        {article.title}
+                      </Link>
+                    </h3>
+                    <p className="text-[#424743] text-sm leading-relaxed mb-4 line-clamp-3">
+                      {article.excerpt}
+                    </p>
+                  </div>
 
-                  {/* Date */}
-                  <div className="flex items-center gap-2 text-xs text-muted">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span className="font-inter">{article.date}</span>
+                  {/* Date & Read time */}
+                  <div className="flex items-center justify-between text-xs text-[#777B75] pt-4 border-t border-[#E9E4DC]/60 mt-auto">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-[#AD8665]" />
+                      <span>{article.publishDate}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-[#AD8665]" />
+                      <span>{article.readTime}</span>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -94,7 +86,7 @@ export default function ArticlesSection() {
               icon={<ArrowLeft className="w-4 h-4 rtl-flip" />}
               iconPosition="end"
             >
-              تصفح جميع المقالات
+              تصفح جميع المقالات (20 مقالاً)
             </Button>
           </div>
         </ScrollReveal>
