@@ -25,7 +25,7 @@ export const article15: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء معمارية الويب وهندسة البرمجيات',
   },
-  coverImage: '/images/articles/wordpress-vs-custom-web-development.svg',
+  coverImage: '/images/articles/wordpress-vs-custom-web-development.jpg',
   coverImageAlt: 'مقارنة بين WordPress والبرمجة المخصصة لمواقع الشركات',
   excerpt: 'مقارنة فنية وهندسية محايدة بين منصة WordPress والبرمجة الخاصة لتطوير مواقع الشركات، تناقش التكلفة الإجمالية للملكية والأمان وسرعة الأداء وقابلية التوسع.',
   tableOfContents: [

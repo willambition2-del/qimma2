@@ -171,12 +171,12 @@ export default function HeroSection() {
           <h1 className="hero-title opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-foreground leading-tight mb-6">
             نصنع حضورك الرقمي
             <br />
-            عبر <span className="text-gold">برمجة مواقع وتطبيقات</span> مبتكرة
+            عبر <span className="text-gold">التسويق الذكي والبرمجة المبتكرة</span>
           </h1>
 
           {/* Description */}
           <p className="hero-description opacity-0 text-base md:text-lg text-muted leading-relaxed max-w-2xl mb-10">
-            شريكك الأول في التسويق الرقمي والتسويق في السعودية. نقدم خدمات برمجية متكاملة تشمل برمجة خاصة وتطوير تطبيقات وادارة حملات التسويق الالكتروني لتعزيز نمو أعمالك ومبيعاتك باحترافية.
+            قمة وكالة متخصصة في التسويق الإلكتروني والبرمجة، نقدم حلولًا رقمية متكاملة تشمل تطوير المواقع والمتاجر والتطبيقات، وإدارة الحملات الإعلانية وحسابات التواصل الاجتماعي، لمساعدة أعمالك على النمو وتحقيق أهدافها.
           </p>
 
           {/* Buttons */}

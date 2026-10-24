@@ -25,7 +25,7 @@ export const article09: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء تحسين محركات البحث وتطوير المتاجر الإلكترونية',
   },
-  coverImage: '/images/articles/salla-seo-guide-saudi.svg',
+  coverImage: '/images/articles/salla-seo-guide-saudi.jpg',
   coverImageAlt: 'دليل عملي لتحسين SEO متاجر سلة في Google',
   excerpt: 'دليل تطبيقي شامل لأصحاب متاجر سلة لرفع ترتيب المنتجات والتصنيفات في Google، وضبط العناوين والروابط الداخلية والصور، وتحويل الزيارات المجانية إلى طلبات شراء مدفوعة.',
   tableOfContents: [

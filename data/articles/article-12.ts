@@ -25,7 +25,7 @@ export const article12: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء منصات التجارة الإلكترونية والحلول السحابية',
   },
-  coverImage: '/images/articles/salla-vs-zid-saudi-2026.svg',
+  coverImage: '/images/articles/salla-vs-zid-saudi-2026.jpg',
   coverImageAlt: 'مقارنة بين منصتي سلة وزد للتجارة الإلكترونية في السعودية 2026',
   excerpt: 'مقارنة تقنية وتشغيلية تفصيلية بين منصتي سلة وزد في السعودية لعام 2026؛ لمساعدتك في اختيار المنصة الأنسب لنشاطك التجاري بحسب طبيعة المخزون، ونقاط البيع، والربط البرمجي.',
   tableOfContents: [

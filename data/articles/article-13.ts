@@ -25,7 +25,7 @@ export const article13: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء الامتثال الرقمي وتشغيل المتاجر الإلكترونية',
   },
-  coverImage: '/images/articles/ecommerce-compliance-saudi-checklist.svg',
+  coverImage: '/images/articles/ecommerce-compliance-saudi-checklist.jpg',
   coverImageAlt: 'قائمة تشغيل وامتثال إنشاء متجر إلكتروني في السعودية 2026',
   excerpt: 'دليل تشغيلي ونظامي متكامل يرشدك لإطلاق متجر إلكتروني نظامي ومتوافق مع اشتراطات وزارة التجارة، وتفعيل الدفع والشحن الآمن وحماية بيانات العملاء في السعودية.',
   tableOfContents: [

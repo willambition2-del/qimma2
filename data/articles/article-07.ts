@@ -25,7 +25,7 @@ export const article07: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء التخطيط المالي والتسويق الرقمي',
   },
-  coverImage: '/images/articles/digital-marketing-cost-saudi-2026.svg',
+  coverImage: '/images/articles/digital-marketing-cost-saudi-2026.jpg',
   coverImageAlt: 'تكلفة التسويق الإلكتروني في السعودية لعام 2026',
   excerpt: 'دليل مالي واستراتيجي مفصل يشرح كيفية بناء ميزانية تسويقية رابحة في السعودية، وفصل رسوم الوكالة عن الإنفاق الإعلاني، واحتساب تكلفة اكتساب العميل وعائد الإنفاق ROAS بدقة.',
   tableOfContents: [

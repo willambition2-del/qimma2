@@ -25,7 +25,7 @@ export const article10: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء إدارة الحملات الإعلانية المدفوعة وتحليل العائد',
   },
-  coverImage: '/images/articles/google-ads-vs-snapchat-saudi.svg',
+  coverImage: '/images/articles/google-ads-vs-snapchat-saudi.jpg',
   coverImageAlt: 'مقارنة إعلانات Google وإعلانات Snapchat في السعودية',
   excerpt: 'مقارنة تسويقية وعملية تساعدك في حسم المفاضلة بين إعلانات Google Search وإعلانات Snapchat في السوق السعودي، بحسب طبيعة المنتج، ونية الشراء، وحسابات الربحية الصافية.',
   tableOfContents: [

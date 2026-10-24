@@ -25,7 +25,7 @@ export const article06: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء تحسين محركات البحث والتسويق العضوي',
   },
-  coverImage: '/images/articles/best-seo-agencies-saudi-2026.svg',
+  coverImage: '/images/articles/best-seo-agencies-saudi-2026.jpg',
   coverImageAlt: 'أفضل شركات SEO في السعودية لعام 2026',
   excerpt: 'دليل عملي يقارن بين خمس جهات تقدم خدمات تحسين محركات البحث في السعودية، مع توضيح الفروق بين الوعود الوهمية والتحسين التقني والمحتوى الموثوق الذي يضاعف المبيعات العضوية.',
   tableOfContents: [

@@ -25,7 +25,7 @@ export const article05: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء الأنظمة السحابية وإدارة موارد المنشآت ERP',
   },
-  coverImage: '/images/articles/erp-software-partners-saudi-2026.svg',
+  coverImage: '/images/articles/erp-software-partners-saudi-2026.jpg',
   coverImageAlt: 'شركات وحلول أنظمة ERP في السعودية لعام 2026',
   excerpt: 'دليل شامل يقارن بين أبرز شركات ومزودي حلول أنظمة تخطيط الموارد ERP في السعودية، مع توضيح الفروق الجوهرية بين البرامج الجاهزة والأنظمة المخصصة ومتطلبات الامتثال والفوترة الإلكترونية.',
   tableOfContents: [

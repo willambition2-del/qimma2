@@ -25,7 +25,7 @@ export const article08: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء استشارات التسويق وإدارة الحسابات الرقمية',
   },
-  coverImage: '/images/articles/how-to-choose-marketing-agency-saudi.svg',
+  coverImage: '/images/articles/how-to-choose-marketing-agency-saudi.jpg',
   coverImageAlt: 'دليل وقائمة فحص اختيار شركة تسويق إلكتروني في السعودية',
   excerpt: 'قائمة فحص عملية ومعايير دقيقة لحماية ميزانيتك قبل التعاقد مع أي وكالة تسويق في السعودية، مع توضيح اشتراطات الملكية وتتبع البيانات وحماية الخصوصية.',
   tableOfContents: [

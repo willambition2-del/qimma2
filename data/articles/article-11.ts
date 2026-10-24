@@ -25,7 +25,7 @@ export const article11: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء تجهيز وتطوير متاجر سلة والتجارة الإلكترونية',
   },
-  coverImage: '/images/articles/salla-store-development-cost-2026.svg',
+  coverImage: '/images/articles/salla-store-development-cost-2026.jpg',
   coverImageAlt: 'تكلفة تصميم وتجهيز متجر سلة احترافي في السعودية 2026',
   excerpt: 'تفصيل واقعي لجميع عناصر تكلفة إنشاء وتجهيز متجر سلة احترافي في السعودية لعام 2026؛ من اشتراك المنصة، والتصميم، وتجهيز المنتجات، والربط اللوجستي وبوابات الدفع حتى التسويق.',
   tableOfContents: [

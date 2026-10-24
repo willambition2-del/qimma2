@@ -25,7 +25,7 @@ export const article14: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء تصميم وتطوير المواقع المؤسسية وحلول الويب',
   },
-  coverImage: '/images/articles/corporate-website-cost-saudi.svg',
+  coverImage: '/images/articles/corporate-website-cost-saudi.jpg',
   coverImageAlt: 'تكلفة تصميم موقع شركة في السعودية لعام 2026',
   excerpt: 'دليل مالي وهندسي شامل يوضح العوامل الحقيقية لتسعير مواقع الشركات في السعودية، والفرق بين المواقع التعريفية وبوابات الخدمات، وتفاصيل الاستضافة والأمان وSEO.',
   tableOfContents: [

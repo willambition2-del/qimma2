@@ -25,7 +25,7 @@ export const article04: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء التجارة الإلكترونية وتطوير المنصات الرقمية',
   },
-  coverImage: '/images/articles/best-ecommerce-developers-saudi-2026.svg',
+  coverImage: '/images/articles/best-ecommerce-developers-saudi-2026.jpg',
   coverImageAlt: 'أفضل شركات تصميم المتاجر الإلكترونية في السعودية 2026',
   excerpt: 'مقارنة لخمس جهات متخصصة في تصميم وتجهيز المتاجر الإلكترونية في السعودية، مع تحليل حلول سلة وزد والمتاجر المخصصة، واختبار تجربة الدفع والشحن والربط المخزني.',
   tableOfContents: [

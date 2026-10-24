@@ -25,7 +25,7 @@ export const article03: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء برمجة وتطوير تطبيقات الجوال والحلول السحابية',
   },
-  coverImage: '/images/articles/best-mobile-app-companies-saudi-2026.svg',
+  coverImage: '/images/articles/best-mobile-app-companies-saudi-2026.jpg',
   coverImageAlt: 'أفضل شركات برمجة تطبيقات الجوال في السعودية 2026',
   excerpt: 'مقارنة شاملة لخمس شركات بارزة في تطوير تطبيقات الهواتف الذكية في السعودية، مع توضيح الفوارق بين التقنيات وتجربة التطبيقات الحية ومعايير الحسابات والدعم الفني.',
   tableOfContents: [

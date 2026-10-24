@@ -25,7 +25,7 @@ export const article20: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء أتمتة الأعمال وربط أنظمة إدارة علاقات العملاء CRM',
   },
-  coverImage: '/images/articles/whatsapp-crm-automation-saudi-business.svg',
+  coverImage: '/images/articles/whatsapp-crm-automation-saudi-business.jpg',
   coverImageAlt: 'دليل ربط وأتمتة واتساب للأعمال بنظام إدارة علاقات العملاء CRM للشركات السعودية',
   excerpt: 'دليل عملي وتقني يوضح كيفية تحويل تطبيق واتساب من هاتف موظف مبيعات واحد إلى منظومة أتمتة مؤسسية مربوطة بنظام CRM، تمنع ضياع العملاء وتضاعف سرعة إغلاق الصفقات.',
   tableOfContents: [

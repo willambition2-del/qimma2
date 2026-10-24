@@ -25,7 +25,7 @@ export const article16: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء هندسة وتطوير تطبيقات الهواتف الذكية',
   },
-  coverImage: '/images/articles/mobile-app-development-cost-saudi-2026.svg',
+  coverImage: '/images/articles/mobile-app-development-cost-saudi-2026.jpg',
   coverImageAlt: 'تكلفة برمجة وتطوير تطبيق جوال في السعودية لعام 2026',
   excerpt: 'دليل مالي وهندسي شامل يوضح العوامل الحقيقية لتسعير تطبيقات الهواتف الذكية في السعودية لعام 2026؛ من مرحلة النموذج الأولي MVP ولوحات التحكم السحابية حتى النشر والصيانة.',
   tableOfContents: [

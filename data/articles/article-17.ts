@@ -25,7 +25,7 @@ export const article17: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'مهندسو تطبيقات الجوال والأطر متعددة المنصات',
   },
-  coverImage: '/images/articles/flutter-vs-native-app-development.svg',
+  coverImage: '/images/articles/flutter-vs-native-app-development.jpg',
   coverImageAlt: 'مقارنة بين تقنية Flutter والتطوير الأصلي Native لتطبيقات الجوال',
   excerpt: 'مقارنة فنية وتقنية شاملة تحسم الجدل بين إطار العمل Flutter والبرمجة الأصلية Native (Swift وKotlin)، وتوضح كيف تختار التقنية الأنسب لتطبيقك بحسب الميزانية والأداء والصيانة.',
   tableOfContents: [

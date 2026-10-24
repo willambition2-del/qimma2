@@ -25,7 +25,7 @@ export const article01: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء التسويق الرقمي والحلول التقنية',
   },
-  coverImage: '/images/articles/best-marketing-agencies-saudi-2026.svg',
+  coverImage: '/images/articles/best-marketing-agencies-saudi-2026.jpg',
   coverImageAlt: 'مقارنة أفضل شركات التسويق الإلكتروني في السعودية لعام 2026',
   excerpt: 'دليل عملي محايد يقارن 5 شركات تسويق بارزة تخدم السوق السعودي، مع تفكيك الخدمات المعلنة وأهم أسئلة التعاقد وضبط الميزانيات بعيداً عن الوعود التسويقية الزائفة.',
   tableOfContents: [

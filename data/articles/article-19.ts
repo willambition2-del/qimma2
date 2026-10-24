@@ -25,7 +25,7 @@ export const article19: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء الفوترة الإلكترونية وهندسة تكامل نقاط البيع والمخزون',
   },
-  coverImage: '/images/articles/zatca-pos-inventory-integration-saudi-2026.svg',
+  coverImage: '/images/articles/zatca-pos-inventory-integration-saudi-2026.jpg',
   coverImageAlt: 'ربط نقاط البيع والمخزون بالفوترة الإلكترونية ZATCA في السعودية 2026',
   excerpt: 'دليل هندسي وتشغيلي شامل يوضح كيفية ربط أجهزة نقاط البيع POS والمستودعات بمنصة «فاتورة» التابعة لهيئة الزكاة والضريبة والجمارك، وضمان تطابق البيانات المحاسبية بدقة.',
   tableOfContents: [

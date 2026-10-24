@@ -25,7 +25,7 @@ export const article02: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء تصميم وتطوير المواقع والحلول التقنية',
   },
-  coverImage: '/images/articles/best-web-design-companies-saudi-2026.svg',
+  coverImage: '/images/articles/best-web-design-companies-saudi-2026.jpg',
   coverImageAlt: 'مقارنة أفضل شركات تصميم المواقع في السعودية 2026',
   excerpt: 'دليل تحليلي يرشدك إلى أفضل خيارات شركات تصميم المواقع في السعودية، مع وضع معايير عملية لاختبار تجربة الجوال، وسرعة التصفح، وحقوق ملكية الكود والاستضافة قبل التعاقد.',
   tableOfContents: [

@@ -25,7 +25,7 @@ export const article18: BlogPost = {
     name: 'فريق تحرير قمة',
     role: 'خبراء معمارية الأنظمة السحابية وإدارة الموارد المؤسسية',
   },
-  coverImage: '/images/articles/custom-erp-vs-ready-made-software.svg',
+  coverImage: '/images/articles/custom-erp-vs-ready-made-software.jpg',
   coverImageAlt: 'مقارنة بين نظام ERP الجاهز وتطوير نظام مخصص للشركات السعودية',
   excerpt: 'دليل استراتيجي لصناع القرار في الشركات السعودية للمفاضلة بين شراء وتطبيق نظام ERP جاهز (مثل Odoo وSAP) أو برمجة نظام إداري سحابي مخصص يلائم العمليات الفريدة بدقة.',
   tableOfContents: [
